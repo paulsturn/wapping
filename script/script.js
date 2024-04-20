@@ -75,7 +75,7 @@ answers.forEach(box => {
         const w_titleDiv = document.getElementById('w_title');
         const w_contentDiv = document.getElementById('w_content');
         const w_image = document.getElementById('w_image');
-        const w_media_1 = document.getElementById('w_media_1');
+        const w_directions = document.getElementById('w_directions');
         const w_quiz = document.getElementById('w_quiz');
 
         const w_warningDiv = document.getElementById('w_warning');
@@ -88,6 +88,16 @@ answers.forEach(box => {
         if (currentItem.video){
           w_image.innerHTML = `<video width='100%' controls loop autoplay><source src='assets/vid/${currentItem.video}' type='video/mp4'></video>`;
         }
+
+        // If have audio directions then show section
+        if (currentItem.audio_direction != '') {
+          w_directions.innerHTML = `<div class="directions-wrap"> <div class="audio-cntr"><audio id="myAudio2" autoplay controls controlsList="nodownload"><source src="${currentItem.audio_direction}" type="audio/mp3"></audio></div></div>`;
+        }
+        else {
+          w_directions.innerHTML = '';
+        }
+
+
 
         // Quiz section
 

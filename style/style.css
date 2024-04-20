@@ -455,16 +455,29 @@ p, li{
 
 
 
-/* Audio control */
+/* Audio controls */
 .audio-wrap{
   display:flex;
   flex-direction: row;
   align-items: center;
 }
 
+
+.directions-wrap{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  display:none;
+}
+
 .audio-cntr{
   flex-grow: 0;
   margin-right: 12px;
+}
+
+.audio-cntr audio{
+  height:34px;  
+  width: calc(100vw - 90px);
 }
 
 .dr-green{
