@@ -34,14 +34,13 @@
             <p class="onboard-text">
               Give your team a name...
             </p>
-            <input type="text" id="teamName" name="teamName">
-            <button id="addTeamName">Save</button>
+            <input type="text" id="teamName" name="teamName" placeholder="e.g. Tequila Mockingbirds">
+            <div id="addTeamName" class="button button-100">Save Team Name</div>
           </div>
-
 
           <div class="spacer"></div>
           <div style="padding:0 80px;">
-            <div id="btn-start" class="button-100" style="border:solid 1px #ffffffb7;">
+            <div id="btn-start" class="button button-200">
                 Next...
             </div>
             <a href="onboard2.htm" class="backlink">< back</a>
@@ -54,36 +53,29 @@
     
       </div>
 
-      <!-- <div class="skyline">  
-      </div> -->
-
       <div id="burst" class=""></div>
+
+      <dialog id="dialogBox" open>
+        <div id="dialogMessage">Good luck!</div>
+        <button id="closeDialog">OK</button>
+      </dialog>
 
     </div>
 
     <script src="script/utility.min.js?cb=1.0.2"></script>
     <script src="script/script.min.js?cb=1.0.1" type="module"></script>
 
-    <!-- <script src="script/data.min.js?cb=1.0.1" type="module"></script>
-    <script src="script/storage.min.js?cb=1.0.4" type="module"></script> -->
-
     <script>
 
       let cb = Math.floor(Math.random() * 2000);
       const start = document.getElementById("btn-start");
       start.addEventListener("click", () => {
+
         const burst = document.getElementById("burst");
         burst.classList.add('animated-element');
         redirectToPage("start.htm?cb=" + cb, 0.5, true);
+
       });
-
-      // const addTeam = document.getElementById("addTeamName");
-      // const teamName = document.getElementById("teamName");
-
-      // addTeam.addEventListener("click", () => {
-      //   createNewTeam(teamName.textContent);
-      //   console.log(teamName.value);
-      // });
 
     </script>
 

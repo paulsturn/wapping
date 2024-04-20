@@ -302,12 +302,7 @@ function getTeamNameLocal(teamName){
 };
 
 
-
-
-
 function createX(teamName){
-  console.log("createX:" + teamName);
-
   setTeamNameLocal(teamName);
   saveTeam(teamName);
 }
@@ -321,12 +316,24 @@ const previousButton = document.getElementById("previousButton");
 const nextButton = document.getElementById("nextButton");
 const mapSwitch = document.getElementById("mapToggle");
 const cameraSwitch = document.getElementById("cameraToggle");
-
+const dialogBox = document.getElementById("dialogBox");
+const dialogMessage= document.getElementById("dialogMessage");
 
 addTeam.addEventListener("click", () => {
   const teamName = document.getElementById("teamName");
-  createX(teamName.value);
+
+  if (teamName.value){
+    createX(teamName.value); 
+  }
+  else{
+    alert("Please enter a team name!");
+    dialogMessage.textContent = "Please enter a team name!";
+  }
+  
 });
+
+
+
 
 previousButton.addEventListener("click", () => {
   stepBackward();
