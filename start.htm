@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style/reset.min.css">
+  <link rel="stylesheet" href="style/style.min.css">
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <title>BeyondTheMapLondon</title>
+  
+  </head>
+  <body>
+
+    <!-- Content -->
+    <div class="wrapper bg-gradient-2">
+
+      <div id="home-box" class="intro-box splash-intro-box">
+        <div class="onboard-logo">
+          <img id="the-icon" src="img/BTML_Yon_Logo_WHITE.svg"  class="logo fadeInZoom-animation">
+        </div>
+        
+        <div style="text-align: center;" class="fadeIn-animation">
+          <p class="splash-intro-text">A few notes before you start<br />
+            <span>Have fun!</span>
+          </p>
+
+          <div class="info-box">
+
+          </div>
+
+
+          <div class="info-box">
+            <div class="dr-green">
+                <!-- <img src="img/dr-green.png"> -->
+                <ul id="controlsx">
+                  <li id="mapToggle"><span class="material-icons">location_on</span></li>
+                  <li id="cameraToggle"><span class="material-icons">camera</span></li>
+                </ul>
+              </div>
+              <div class="info-text">
+                <p>Description of map icons.<br /><br />
+                  Example quiz question?</p>
+              </div>
+          </div>
+
+
+          <div class="info-box">
+            <div class="dr-green">
+                <img class="fadeInZoom-animation" src="img/dr-green.png">
+              </div>
+              <div class="info-text">
+                <p>This is Dr Matthew Green.<br />
+                  When you see him, click to hear a gritty, historical narration.<br /><small>Dr Green is a critically acclaimed historian and Times Top 10 best-selling author.</small></p>
+              </div>
+          </div>
+
+
+
+          <div class="spacer"></div>
+          <div class="spacer"></div>
+          <div class="spacer"></div>
+          
+          <div style="padding:0 80px;">
+            <div id="btn-start" class="button-100" style="border:solid 1px #ffffffb7;">
+                Start the walk...
+            </div>
+            <a href="onboard3.htm" class="backlink">< back</a>
+          </div>         
+        </div>
+        
+        <div class="spacer"></div>
+    
+      </div>
+
+      <!-- <div class="skyline">  
+      </div> -->
+
+
+      <div id="burst" class=""></div>
+
+
+    </div>
+
+    <script src="script/utility.min.js?cb=1.0.2"></script>
+    <script src="script/script.min.js?cb=1.0.1" type="module"></script>
+
+    <script>
+
+      const start = document.getElementById("btn-start");
+      start.addEventListener("click", () => {
+        const burst = document.getElementById("burst");
+        burst.classList.add('animated-element');
+        redirectToPage("home.htm", 0.5, true);
+      });
+
+    </script>
+
+  </body>
+</html>
