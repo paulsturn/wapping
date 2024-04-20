@@ -1203,7 +1203,7 @@ background: -webkit-linear-gradient(90deg, hsla(239, 94%, 14%, 1) 0%, hsla(190, 
     padding: var(--padding-200);
     padding-top:40px;
     background-color: #CFC9BD;
-    color:#fff;
+    color:#000;
     font-family: sans-serif;
     font-size: 18px;
     font-weight: bold;
@@ -1212,9 +1212,12 @@ background: -webkit-linear-gradient(90deg, hsla(239, 94%, 14%, 1) 0%, hsla(190, 
     top: 50%;
     transform: translate(-50%, -50%);
     width:80%;
-    min-height:30vh;
+    min-height:45vh;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background: #CFC9BD url(/assets/img/wap/pirate-ai.jpg) no-repeat;
+    background-size: 200px;
+    background-position: right bottom;
   }
