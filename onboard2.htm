@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style/reset.min.css">
+  <link rel="stylesheet" href="style/style.min.css">
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <title>BeyondTheMapLondon</title>
+  
+  <style>
+    .skyline{
+        background-image:url(img/London-svg-ani-bg-1.svg);
+        background-repeat: no-repeat;
+        transform: translateY(-30px) scale(2);
+        height:80px;
+        width:100%;
+        position:absolute;
+        opacity:.50;
+        bottom:0;
+    }
+    
+</style>
+  </head>
+  <body>
+
+    <!-- Content -->
+    <div class="wrapper bg-gradient-2">
+
+      <div id="home-box" class="intro-box splash-intro-box">
+        <div class="onboard-logo">
+          <img id="the-icon" src="img/BTML_Yon_Logo_WHITE.svg"  class="logo fadeInZoom-animation">
+        </div>
+        
+        <div style="text-align: center;" class="fadeIn-animation">
+          <p class="splash-intro-text">LONDON WAPPING WALK<br />
+            <span>St Katherine, Painters & Pirates</span>
+          </p>
+          <p>
+
+          </p>
+
+          <img id="the-pirate" src="img/BTML-Wapping-Tavern-Tour.svg" class="fadeIn-animation pirate" style="width:55%;">
+          <div class="spacer"></div>
+          <div class="spacer"></div>
+          <div style="padding:0 80px;">
+            <div id="btn-start" class="button-100" style="border:solid 1px #ffffffb7;">
+                Next...
+            </div>
+            <a href="onboard1.htm" class="backlink">< back</a>
+          </div>         
+        </div>
+        
+        <div class="spacer"></div>
+    
+      </div>
+
+      <!-- <div class="skyline">  
+      </div> -->
+
+
+      <div id="burst" class=""></div>
+
+
+    </div>
+
+    <script src="script/utility.min.js?cb=1.0.2"></script>
+
+    <script>
+
+      const start = document.getElementById("btn-start");
+      start.addEventListener("click", () => {
+        const burst = document.getElementById("burst");
+        burst.classList.add('animated-element');
+        redirectToPage("onboard3.htm", 0.5, true);
+      });
+
+    </script>
+
+  </body>
+</html>

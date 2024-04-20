@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style/reset.min.css">
+    <link rel="stylesheet" href="style/style.min.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+    <title>BeyondTheMapLondon</title>
+</head>
+
+<body class="no-bars grunge-100">
+
+  <div class="wrapper">
+
+    <div class="header">
+      BTML <div id="currentTeamName"></div>
+    </div>
+
+    <div class="inner">
+
+      <div class="inner-spaced title-section">
+        <div class="sub-title">WAPPING TAVEN TOUR</div>
+        <div id="w_title" class="title"></div>
+      </div>
+
+      <div class="inner-full">
+        <div id="w_image" class="hero-image ken-burns"></div>
+      </div>
+
+      <div class="inner-spaced">
+        <div id="w_content" class="content">w_content</div>
+        <div id="w_warning"></div>
+      </div>
+
+      <div class="inner-full">
+        <div id="w_media_1">media</div>
+      </div>
+
+      <div class="inner-spaced quiz">
+
+        <div id="w_quiz">quiz</div>
+
+          <!-- <div class="sub-title">QUESTION</div>
+          <div class="time-bar" data-style="smooth" style="--duration: 20;">
+            <div></div>
+          </div>   -->
+           
+          <!-- <h3 id="score" style="text-align: right;">Current score 3 from 3</h3> -->
+          <!-- <h5 style="text-align: right;margin-top:-20px;color:#416601;letter-spacing:1px;">Maximum score so far!</h5> -->
+
+      </div>
+
+      <div class="inner-spaced quiz">
+
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <!-- <div class="sticky-container-bottom"> -->
+        <div class="control-wrapper">
+            <div id="previousButton" class="control">
+                <span class="material-icons">chevron_left</span>
+                <!-- <p>HOME</p> -->
+            </div>
+            <div id="fly" class="control">
+                <span class="material-icons">my_location</span>
+                <!-- <p>LOCATE</p> -->
+
+            </div>    
+            <div id="mapswitch" class="control">
+                <span class="material-icons">map</span>
+                <!-- <p>SETTINGS</p> -->
+            </div>
+            <div id="nextButton" class="control">
+                <span class="material-icons">chevron_right</span>
+                <!-- <p>HOME</p> -->
+            </div>    
+        </div>    
+    <!-- </div> -->
+    </div>
+
+  </div>
+
+<div id="map">
+</div>
+
+<div id="camera">
+</div>
+
+  <!-- floating controls -->
+  <ul id="controls">
+    <li id="mapToggle"><span class="material-icons">location_on</span></li>
+    <li id="cameraToggle"><span class="material-icons">camera</span></li>
+  </ul>
+ 
+  <script>
+    
+    mapboxgl.accessToken = 'pk.eyJ1IjoicGF1bHN0dXJuIiwiYSI6ImNsb29xNjhsYTAzMWMyaWs0MnhmcnkwemMifQ.QGAyREqnB3rSzZTZoevDQw';
+
+    const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/paulsturn/clor4p1kl00ni01pbg0en5pa4',
+      center: [-0.0704913,51.5065202],
+      zoom: 8,
+      bearing: 10
+    });
+
+
+    map.easeTo({
+      zoom:16,
+      bearing: -10,
+      duration: 7000,
+      easing: x => x
+    });
+
+
+    // show team name in header
+    const teamNameEle = document.getElementById("currentTeamName");
+    teamNameEle.textContent = localStorage.getItem("team_name"); // getTeamNameLocal();
+
+
+  </script>
+
+<script src="data/w_wapping.js?cb=1.0.3"></script>  
+<script src="script/script.min.js?cb=1.0.4" type="module"></script>
+
+</body>
+</html>

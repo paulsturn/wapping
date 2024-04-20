@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style/reset.min.css">
+  <link rel="stylesheet" href="style/style.min.css">
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <title>BeyondTheMapLondon</title>
+  
+  </head>
+  <body>
+
+    <!-- Content -->
+    <div class="wrapper bg-gradient-2">
+
+      <div id="home-box" class="intro-box splash-intro-box">
+        <div class="onboard-logo">
+          <img id="the-icon" src="img/BTML_Yon_Logo_WHITE.svg"  class="logo fadeInZoom-animation">
+        </div>
+        
+        <div style="text-align: center;" class="fadeIn-animation">
+          <p class="splash-intro-text">LONDON WAPPING WALK<br />
+            <span>St Katherine, Painters & Pirates</span>
+          </p>
+
+          <img id="the-pirate" src="img/BTML-Wapping-Tavern-Tour.svg" class="fadeIn-animation pirate " style="width:35%;">
+
+          <div class="team-wrap">
+            <p class="onboard-text">
+              Give your team a name...
+            </p>
+            <input type="text" id="teamName" name="teamName">
+            <button id="addTeamName">Save</button>
+          </div>
+
+
+          <div class="spacer"></div>
+          <div style="padding:0 80px;">
+            <div id="btn-start" class="button-100" style="border:solid 1px #ffffffb7;">
+                Next...
+            </div>
+            <a href="onboard2.htm" class="backlink">< back</a>
+          </div>         
+        </div>
+        
+        <div class="spacer"></div>
+
+        <a href="teamphoto.htm?cb=team" class="">( test )</a>
+    
+      </div>
+
+      <!-- <div class="skyline">  
+      </div> -->
+
+      <div id="burst" class=""></div>
+
+    </div>
+
+    <script src="script/utility.min.js?cb=1.0.2"></script>
+
+    <script src="script/script.min.js?cb=1.0.1" type="module"></script>
+    <!-- <script src="script/data.min.js?cb=1.0.1" type="module"></script>
+    <script src="script/storage.min.js?cb=1.0.4" type="module"></script> -->
+
+    <script>
+
+      let cb = Math.floor(Math.random() * 2000);
+      const start = document.getElementById("btn-start");
+      start.addEventListener("click", () => {
+        const burst = document.getElementById("burst");
+        burst.classList.add('animated-element');
+        redirectToPage("start.htm?cb=" + cb, 0.5, true);
+      });
+
+      // const addTeam = document.getElementById("addTeamName");
+      // const teamName = document.getElementById("teamName");
+
+      // addTeam.addEventListener("click", () => {
+      //   createNewTeam(teamName.textContent);
+      //   console.log(teamName.value);
+      // });
+
+    </script>
+
+  </body>
+</html>
