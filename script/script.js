@@ -1,5 +1,5 @@
 
-import { saveTeam, saveAnswer } from "./scripts/data.js";
+import { saveTeam, saveAnswer } from "./script/data.js";
 
 // Initialize an index to keep track of the current item
 let currentIndex = 0;
