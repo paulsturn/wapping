@@ -91,7 +91,7 @@ answers.forEach(box => {
 
         // If have audio directions then show section
         if (currentItem.audio_direction != '') {
-          w_directions.innerHTML = `<div class="directions-wrap"> <div class="audio-cntr"><audio id="myAudio2" autoplay controls controlsList="nodownload"><source src="${currentItem.audio_direction}" type="audio/mp3"></audio></div></div>`;
+          w_directions.innerHTML = `<div class="directions-wrap"> <div class="audio-cntr"><audio id="audioDirections" autoplay controls controlsList="nodownload"><source src="${currentItem.audio_direction}" type="audio/mp3"></audio></div></div>`;
         }
         else {
           w_directions.innerHTML = '';
@@ -191,6 +191,19 @@ function cameraToggle() {
   cameraDiv.classList.toggle("cameraOpen"); 
 }
 
+function directionsPlayToggle(){
+  
+  var player = document.getElementById("audioDirections"); 
+  player.classList.toggle("playing"); 
+  // player.play();
+  // player.pause();
+  togglePlayPause(player);
+
+  // Material icon -> volume_off
+
+}
+
+
 // Function to step forward
 function stepForward() {
   if (currentIndex < steps.length - 1) {
@@ -229,16 +242,21 @@ function scrollToTop() {
 // Get the audio element
 var audio = document.getElementById("myAudio1");
 
-// Get the play/pause button element
-var playPauseButton = document.getElementById("playMedia1");
-
 // Function to play or pause the audio
-function togglePlayPause() {
-  if (audio.paused) {
-    audio.play();
+function togglePlayPause(audioElement) {
+  if (audioElement.paused) {
+    audioElement.play();
   } else {
-    audio.pause();
+    audioElement.pause();
   }
+
+
+
+    // myAudio.pause();
+    // myAudio.currentTime = 0;
+    // myAudio.src = 'sound.mp3';
+
+
 }
 
 // Event listener for the play/pause button (you can replace this with your own button or trigger)
@@ -326,8 +344,13 @@ const previousButton = document.getElementById("previousButton");
 const nextButton = document.getElementById("nextButton");
 const mapSwitch = document.getElementById("mapToggle");
 const cameraSwitch = document.getElementById("cameraToggle");
+const directionsSwitch = document.getElementById("directionsToggle");
+
 const dialogBox = document.getElementById("dialogBox");
 const dialogMessage= document.getElementById("dialogMessage");
+
+
+// Only attach if addTeam is present
 
 addTeam.addEventListener("click", () => {
   const teamName = document.getElementById("teamName");
@@ -341,7 +364,6 @@ addTeam.addEventListener("click", () => {
   }
   
 });
-
 
 
 
@@ -361,4 +383,6 @@ cameraSwitch.addEventListener("click", () => {
   cameraToggle();
 });
 
-
+directionsSwitch.addEventListener("click", () => {
+  directionsPlayToggle();
+});
