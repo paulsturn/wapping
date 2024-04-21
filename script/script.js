@@ -136,7 +136,7 @@ answers.forEach(box => {
               // append to result
               subChildHtml += `<p class="question">${question}</p>`;
               subChildHtml += `<div class="options opt-${qid}">${answerOptions}</div>`;
-              subChildHtml += `<div id="radioForm" class="xhide">${radioOptions}</div>`;
+              subChildHtml += `<div id="radioForm" class="hide">${radioOptions}</div>`;
               
             }
         }
