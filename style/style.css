@@ -133,6 +133,11 @@ p, li{
   width:100%;
 }
 
+.hero-section-dec:after{
+  
+}
+
+
 .title{
   color:#ffffff;
   font-weight: 600;
