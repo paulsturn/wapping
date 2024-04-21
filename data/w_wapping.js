@@ -29,7 +29,8 @@ const steps = [
         quiz: "2",
         lat: "51.5065469", 
         lon: "-0.0718432",
-        subChild: {
+        questions: {
+            q1: "001-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
         }  
     },
     { 
@@ -44,7 +45,8 @@ const steps = [
         video: "",
         lat: "51.50623", 
         lon: "-0.07209",
-        subChild: {
+        questions: {
+            q1: "001-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
         }  
     },
     { 
@@ -59,7 +61,8 @@ const steps = [
         video: "",
         lat: "51.50623", 
         lon: "-0.07209",
-        subChild: {
+        questions: {
+            q1: "001-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
         }  
     },
     { 
@@ -74,7 +77,8 @@ const steps = [
         video: "",
         lat: "51.50623", 
         lon: "-0.07209",
-        subChild: {
+        questions: {
+            q1: "001-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
         }  
     },
     { 
@@ -89,7 +93,8 @@ const steps = [
         video: "",
         lat: "51.50623", 
         lon: "-0.07209",
-        subChild: {
+        questions: {
+            q1: "001-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
         }  
     },
     { 
@@ -104,7 +109,8 @@ const steps = [
         video: "wap/Panning_London_Skyline_3840x2160.mp4",
         lat: "51.50623", 
         lon: "-0.07209",
-        subChild: {
+        questions: {
+            q1: "001-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
         }  
     },
     { 
@@ -119,8 +125,9 @@ const steps = [
         video: "",
         lat: "51.50623", 
         lon: "-0.07209",
-        subChild: {
-        }  
+        questions: {
+            q1: "001-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
+        }   
     },
     { 
         name: "Wapping High Street", 
@@ -134,7 +141,8 @@ const steps = [
         video: "",
         lat: "51.50623", 
         lon: "-0.07209",
-        subChild: {
+        questions: {
+            q1: "001-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
         }  
     },
     { 
@@ -149,8 +157,9 @@ const steps = [
         video: "",
         lat: "51.50623", 
         lon: "-0.07209",
-        subChild: {
-        }  
+        questions: {
+            q1: "001-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
+        }   
     },
     { 
         name: "Tavern stop No. 2", 
@@ -164,7 +173,8 @@ const steps = [
         video: "",
         lat: "51.50623", 
         lon: "-0.07209",
-        subChild: {
+        questions: {
+            q1: "001-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
         }  
     },
     { 
@@ -179,7 +189,8 @@ const steps = [
         video: "",
         lat: "51.50623", 
         lon: "-0.07209",
-        subChild: {
+        questions: {
+            q1: "001-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
         }  
     },
     { 
@@ -194,8 +205,9 @@ const steps = [
         video: "",
         lat: "51.50623", 
         lon: "-0.07209",
-        subChild: {
-        }  
+        questions: {
+            q1: "001-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
+        } 
     },
     { 
         name: "Turk’s Head", 
@@ -209,8 +221,9 @@ const steps = [
         video: "",
         lat: "51.50623", 
         lon: "-0.07209",
-        subChild: {
-        }  
+        questions: {
+            q1: "001-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
+        }   
     },
     { 
         name: "Tavern stop No. 3", 
@@ -224,8 +237,9 @@ const steps = [
         video: "wap/SEP_OldStar2.mp4",
         lat: "51.50623", 
         lon: "-0.07209",
-        subChild: {
-        }  
+        questions: {
+            q1: "001-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
+        }   
     },
     { 
         name: "Brewhouse Street", 
@@ -239,7 +253,8 @@ const steps = [
         video: "",
         lat: "51.50623", 
         lon: "-0.07209",
-        subChild: {
+        questions: {
+            q1: "001-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
         }  
     },
     { 
@@ -254,7 +269,8 @@ const steps = [
         video: "",
         lat: "51.50623", 
         lon: "-0.07209",
-        subChild: {
+        questions: {
+            q1: "001-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
         }  
     },
     { 
@@ -269,7 +285,8 @@ const steps = [
         video: "wap/BTM wapping RAW .mp4",
         lat: "51.50623", 
         lon: "-0.07209",
-        subChild: {
+        questions: {
+            q1: "001-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
         }  
     },
     { 
@@ -284,7 +301,8 @@ const steps = [
         video: "",
         lat: "51.50623", 
         lon: "-0.07209",
-        subChild: {
+        questions: {
+            q1: "001-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
         }  
     },
     { 
@@ -299,8 +317,9 @@ const steps = [
         video: "",
         lat: "51.50623", 
         lon: "-0.07209",
-        subChild: {
-        }  
+        questions: {
+            q1: "001-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
+        } 
     },
     { 
         name: "WELL DONE!", 
@@ -314,7 +333,8 @@ const steps = [
         video: "",
         lat: "51.50623", 
         lon: "-0.07209",
-        subChild: {
+        questions: {
+            q1: "001-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
         }  
     },
 
