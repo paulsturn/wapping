@@ -61,6 +61,10 @@ answers.forEach(box => {
     // do pre-display tasks
     // removeClassFromElements('answer', 'answer-enable'); 
 
+    // Stop any playing audio
+    // audioReset();
+
+
     // If no steps then exit
     if (typeof steps === "undefined") { 
       console.log("exiting DisplayCurrentItem as no steps"); 
@@ -203,6 +207,14 @@ function directionsPlayToggle(){
 
 }
 
+
+function audioReset(){
+  var player = document.getElementById("audioDirections"); 
+  // player.classList.toggle("playing"); 
+  player.pause();
+  player.currentItem = 0;
+  player.src = '';
+}
 
 // Function to step forward
 function stepForward() {
