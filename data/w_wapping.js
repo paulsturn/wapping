@@ -1,7 +1,7 @@
 // Define an array with walk step items
 const steps = [
     { 
-        name: "Preparation", 
+        name: "Before you start your Tour", 
         place: "<p>Before you start our tour... Advice and notes -  not too long !. Perhaps a Matthew intro below, again less than 20 seconds!</p>",
         info: "<p>(safety message</p>",
         access: "233",
