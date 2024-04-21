@@ -134,17 +134,17 @@ p, li{
 }
 
 .hero-section-dec:after{
-  
+
 }
 
 
 .title{
-  color:#ffffff;
+  color: #fff;
   font-weight: 600;
-  font-size: 26px;
+  font-size: 19px;
   line-height: 1.3rem;
-  letter-spacing: -1px;
-  padding-bottom:3px;
+  letter-spacing: -.5px;
+  padding-bottom: 0px;
 }
 
 .sub-title{
