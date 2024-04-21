@@ -6,7 +6,7 @@ const steps = [
         info: "<p>(safety message</p>",
         access: "233",
         audio_direction: "assets/aud/dir/WTT1-1.mp3",
-        audio_talk: "assets/aud/his/WappingIntroWithEffects.mp3",
+        audio_talk: "",
         image: "wap/pirate-ai.jpg",
         video: "",
         quiz: "0",
