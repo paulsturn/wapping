@@ -7,7 +7,7 @@ const steps = [
         access: "233",
         audio_direction: "assets/aud/dir/WTT1-1.mp3",
         audio_talk: "assets/aud/his/WappingIntroWithEffects.mp3",
-        image: "wap/StKatherinesDocks202208.jpg",
+        image: "wap/pirate-ai.jpg",
         video: "",
         quiz: "0",
         lat: "51.5065202",
