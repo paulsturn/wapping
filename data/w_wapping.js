@@ -57,7 +57,7 @@ const steps = [
         audio_direction: "assets/aud/dir/WTT1-4.mp3",
         audio_talk: "assets/aud/his/WappingIntroWithEffects.mp3",
         quiz: "0",
-        image: "wap/harrisons.jpg",
+        image: "wap/Harrisons.jpg",
         video: "",
         lat: "51.50623", 
         lon: "-0.07209",
