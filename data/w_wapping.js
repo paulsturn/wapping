@@ -29,8 +29,6 @@ const steps = [
         lat: "51.5065202",
         lon: "-0.0704913",
         questions: {
-            q1: "001-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
-            q2: "002-You may be familiar with the phrase “when the sun is over the yard-arm” which indicates when it is acceptable to have the first alcoholic drink of the day. What part of the Cutty Sark that you saw at the beginning of the tour is the “arm” that this phrase is referring to?[The ship’s wheel,The main mast,The horizontal beams from which the sails hang,The carved figure at the bow of the ship]",
         } 
     },
     { 
@@ -46,8 +44,12 @@ const steps = [
         lat: "51.5065469", 
         lon: "-0.0718432",
         questions: {
-            q1: "101-Which port official lives in the imposing house behind the wall? [The Dockmaster,The Commodore of the Pool of London,Admiral of the Fleet, The King]",
-        }  
+            q1: "101-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
+            q2: "102-You may be familiar with the phrase “when the sun is over the yard-arm” which indicates when it is acceptable to have the first alcoholic drink of the day. What part of the Cutty Sark that you saw at the beginning of the tour is the “arm” that this phrase is referring to?[The ship’s wheel,The main mast,The horizontal beams from which the sails hang,The carved figure at the bow of the ship]",
+            q3: "103-Which famous architect designed the plans for the new dock in the early part of the 19th Century. He also designed one of the original footbridges that you are standing near.[Isambard Kingdom Brunel,Thomas Telford,Norman Foster,George Stephenson]",
+            q4: "104-What is unusual about the Dickens Inn?.[It's an original warehouse from the dock that was reconstructed here,It's only 10 years old, It was once nearly sold to be shipped to the US,Charles Dickens' mistress lived here]",
+            q5: "105-What is the link to Charles Dickens?[It was Charles Dickens' favourite watering hole,The first landlord was 'Samuel Crooge',It featured in a number of Charles Dickens' books,There is no link to Charles Dickens]",
+        } 
     },
     { 
         name: "Towards the lock", 
@@ -62,7 +64,9 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "003-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
+            q1: "106-Which port official lives in the imposing house behind the wall? [The Dockmaster,The Commodore of the Pool of London,Admiral of the Fleet, The King]",
+            q2: "107-Which Queen of the Netherlands visited the docks in 1988 to commemorate 300 years of Anglo- Dutch maritime friendship?[Maxima,Juliana,Wilhelmina,Beatrix]",
+            q3: "108-The blue-edged plaque describes how the lock works to enable boats to leave the Thames and enter the docks. How much does the high and low tides on the Thames vary by?[Less than 5 meters,5-10 meters,9-10 meters,10-12 meters]",
         }  
     },
     { 
@@ -78,7 +82,6 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "004-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? [Brandy,Tea,Silk,Coffee beans]",
         }  
     },
     { 
@@ -94,7 +97,7 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "005-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
+            q1: "110-This is the home to HMS President, which is the Royal Naval Reserve London. When was the Foundation Stone for the building laid?[31st July 1987,30th July 1986*,1st August 1989,1st August 1990]",
         }  
     },
     { 
@@ -110,7 +113,6 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "006-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? [Brandy,Tea,Silk,Coffee beans]",
         }  
     },
     { 
@@ -126,7 +128,9 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "007-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
+            q1: "115-Name the River?[Tyburn,Effra,Neckinger*,Tide]",        
+            q2: "116-On the opposite side of the river is the Shard, which is the tallest building in Britain. How many storeys does it have?[79,88,95*,99]",        
+            q3: "117-What is the name of the huge building on the riverbank that you can see across the river?[Canada Wharf,Butler's Wharf*,India Wharf,Angel Wharf]",        
         }  
     },
     { 
@@ -142,7 +146,10 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "008-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? [Brandy,Tea,Silk,Coffee beans]",
+            q1: "120-What was the bombing of London called in WWII?[The London Bombing,The Blitz*,The London Firestorm,The Lightning War]",
+            q2: "121-What does the dove symbolise according to the information plaque?[Hope*,Courage,Love,Peace]",  
+            q3: "122-On this site stood the Hermitage Wharf which was hit by a massive firebomb raid on the City of London. When was this?[25th December 1940,25th December 1940,29th December 1940*,31st December 1940]",  
+            q4: "123-Which former MP lived near the gardens and has a rose bed near the statue named after them in the gardens?[Jim Fitzpatrick,Apsana Begum,George Galloway, Jo Cox*]", 
         }   
     },
     { 
@@ -158,7 +165,7 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "009-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? [Brandy,Tea,Silk,Coffee beans]",
+            q1: "125-On the right is No.3. In the past what was No.3 used for?[A doctor's surgery,A pharmacy,A post office,Customs office*]",  
         }  
     },
     { 
@@ -174,8 +181,10 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "010-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? [Brandy,Tea,Silk,Coffee beans]",
-        }   
+            q1: "130-The location of the stairs had to be memorised by the apprentice watermen. London Black Cab drivers have to pass a similar test. What is it called[The Knowledge*,The Housego,The Cabbie Exam,The London A-Z Test]",      
+            q1: "131-At low tide you might be able to see a post near the steps. What was this post used for?[To enable the watermen to tie up their boats so passengers could disembark,To tie condemed pirates to so they would drown when the tide rose*,For River Police to moor their boats to,To enable easy access to the native oyster beds in the Thames ]",       
+            q1: "132-Which famous seafarer came to inspect his vessel before sailing to warmer climes in the late 18th century from Waterman Steps?[Lieutenant James Bligh inspecting the Bounty*,James Kirk inspecting the Golden Hind,Lieutenant James Cook inspecting the Endeavour,Captain Horatio Nelson inspecting the Albemarle]", 
+        }          
     },
     { 
         name: "Tavern stop No. 2", 
@@ -190,7 +199,9 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "011-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? [Brandy,Tea,Silk,Coffee beans]",
+            q1: "135-Which notorious Lord Chief Justice was captured whilst trying to escape by boat from here?[Judge Rinder,Judge Frollo,Judge Jeffries*,Judge Reinhold]", 
+            q2: "136-What was he disguised as when captured?[A woman,A sailor*,A ferryboatman,A merchant]", 
+            q3: "137-Why did the pub's name end up as it is today??[Because a famous mayor of Ramsgate was born in Wapping,Because sheep were herded along this street on their way to nearby Smithfield meat market,Because fishing boats from Ramsgate used to unload their loads nearby*,From the many Ram Skulls found on the shore during Roman times.]",        
         }  
     },
     { 
@@ -206,7 +217,9 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "012-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
+            q1: "140-Who was buried in this churchyard on 1648?[Thomas Cromwell,Thomas à Becket,Thomas Gainsborough,Thomas Rainsborough*]",
+            q2: "141-What rank did this person hold in the New Model Army?[General,Colonel*,Admmiarl,Cavalier]",  
+            q3: "142-Which famous British politician helped unveil the plaque in 2013?[Tony Blair,Tony Benn*,Hilary Benn,Ben Wallace]",   
         }  
     },
     { 
@@ -217,12 +230,14 @@ const steps = [
         audio_direction: "assets/aud/dir/WTT1-13.mp3",
         audio_talk: "",
         quiz: "132",
-        image: "wap/no-image.jpg",
+        image: "wap/Figures202208.jpg",
         video: "",
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "013-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
+            q1: "145-What are the figure on the building?[A girl and a boy*,A nun and a priest,A teacher and a sailor,A shepherdess and shepherd]", 
+            q2: "146-When was the building founded?[1666,1695*,1760,1766]",
+            q3: "147-How many pupils does the building say it would accommodate?[80,60,110*,150]",     
         } 
     },
     { 
@@ -238,7 +253,10 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "014-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
+            q1: "150-Question?[Answer1,Answer2,Answer3,Answer4]",   
+            q2: "151-Question?[Answer1,Answer2,Answer3,Answer4]", 
+            q3: "152-Question?[Answer1,Answer2,Answer3,Answer4]", 
+            q4: "153-Question?[Answer1,Answer2,Answer3,Answer4]",      
         }   
     },
     { 
@@ -254,7 +272,7 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "015-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
+            q1: "110-Question?[Answer1,Answer2,Answer3,Answer4]",        
         }   
     },
     { 
@@ -270,7 +288,7 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "016-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
+            q1: "110-Question?[Answer1,Answer2,Answer3,Answer4]",        
         }  
     },
     { 
@@ -285,8 +303,7 @@ const steps = [
         video: "",
         lat: "51.50623", 
         lon: "-0.07209",
-        questions: {
-            q1: "017-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
+        questions: {      
         }  
     },
     { 
@@ -302,7 +319,7 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "018-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
+            q1: "110-Question?[Answer1,Answer2,Answer3,Answer4]",        
         }  
     },
     { 
@@ -317,8 +334,7 @@ const steps = [
         video: "",
         lat: "51.50623", 
         lon: "-0.07209",
-        questions: {
-            q1: "019-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
+        questions: {      
         }  
     },
     { 
@@ -334,7 +350,7 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "020-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
+            q1: "110-Question?[Answer1,Answer2,Answer3,Answer4]",        
         } 
     },
     { 
@@ -350,7 +366,7 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "022-Did you enjoy your walk?.[Yes, No]",
+            q1: "110-Question?[Answer1,Answer2,Answer3,Answer4]",        
         }  
     },
 
