@@ -78,10 +78,12 @@ answers.forEach(box => {
         // const w_resultDiv = document.getElementById('w_result');
         const w_titleDiv = document.getElementById('w_title');
         const w_contentDiv = document.getElementById('w_content');
+
+
         const w_image = document.getElementById('w_image');
         const w_directions = document.getElementById('w_directions');
         const w_quiz = document.getElementById('w_quiz');
-
+        const w_infoDiv = document.getElementById('w_info');
         const w_warningDiv = document.getElementById('w_warning');
         const w_mediaDiv1 = document.getElementById('w_media_1');
 
@@ -93,6 +95,23 @@ answers.forEach(box => {
           w_image.innerHTML = `<video width='100%' controls loop autoplay><source src='assets/vid/${currentItem.video}' type='video/mp4'></video>`;
         }
 
+
+        if (currentItem.info != '') {
+          w_infoDiv.innerHTML = `${currentItem.info}`;          
+        }
+        else{
+          w_infoDiv.innerHTML = '';
+        }
+
+        if (currentItem.access != '') {
+          w_warningDiv.innerHTML = `${currentItem.access}`;
+          console.log("warning was not empty..." + currentItem.access + ".");
+        }
+        else {
+          w_warningDiv.innerHTML = '';
+          console.log("warning was empty...");
+        }
+
         // If have audio directions then show section
         if (currentItem.audio_direction != '') {
           w_directions.innerHTML = `<div class="directions-wrap"> <div class="audio-cntr"><audio id="audioDirections" autoplay controls controlsList="nodownload"><source src="${currentItem.audio_direction}" type="audio/mp3"></audio></div></div>`;
@@ -101,10 +120,7 @@ answers.forEach(box => {
           w_directions.innerHTML = '';
         }
 
-
-
         // Quiz section
-
         let subChildHtml = "";
 
         for (const key in currentItem.questions) {
@@ -369,10 +385,12 @@ addTeam.addEventListener("click", () => {
 
   if (teamName.value){
     createX(teamName.value); 
+    myDialog.showModal()
   }
   else{
     alert("Please enter a team name!");
-    dialogMessage.textContent = "Please enter a team name!";
+    // myDialog.showModal()
+    // dialogMessage.textContent = "Please enter a team name!";
   }
   
 });
