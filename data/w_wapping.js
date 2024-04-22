@@ -3,8 +3,8 @@ const steps = [
     { 
         name: "Before you start your Tour", 
         place: "<p>Before you start our tour... Advice and notes -  not too long !. Perhaps a Matthew intro below, again less than 20 seconds!</p>",
-        info: "<p>(safety message)</p>",
-        access: "<p>(access notes)</p>",
+        info: "<p>Additional information about the location will appear in a box like this.</p>",
+        access: "<p>Messages about Restricted access or Safety considerations will show in box like this.</p>",
         audio_direction: "assets/aud/dir/WTT1-1.mp3",
         audio_talk: "",
         image: "wap/pirate-ai.jpg",
@@ -13,7 +13,7 @@ const steps = [
         lat: "51.5065202",
         lon: "-0.0704913",
         questions: {
-            q1: "000-This will be a sample trial question to get people used to the questions. [London,Paris,New York,Rome]",
+            q1: "000-Questions relating to the location will appear like this. [London,Paris,New York,Rome]",
         } 
     },
     { 
