@@ -344,11 +344,8 @@ function removeTextInBrackets(inputString) {
 }
 
 
-
 function setTeamNameLocal(teamName){
   // Save Team name to local storage
-//   localStorage.setItem("myval", "A value");
-//   localStorage.getItem("myval");
   localStorage.setItem("team_name", teamName);
 };
 

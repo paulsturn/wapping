@@ -30,13 +30,19 @@
 
           <img id="the-pirate" src="img/BTML-Wapping-Tavern-Tour.svg" class="fadeIn-animation pirate " style="width:35%;">
 
+
+          <!-- Don't show this is already have a team name -->
           <div class="team-wrap">
-            <p class="onboard-text">
-              Give your team a name...
-            </p>
-            <input type="text" id="teamName" name="teamName" placeholder="e.g. Tequila Mockingbirds">
-            <div id="addTeamName" class="button button-100">Save Team Name</div>
-          </div>
+            <div id="requestTeamName">
+              <p class="onboard-text">
+                Give your team a name...
+              </p>
+              <input type="text" id="teamName" name="teamName" placeholder="e.g. Tequila Mockingbirds">
+              <div id="addTeamName" class="button button-100">Save Team Name</div>
+            </div>
+            <!-- or -->
+            <p id="existingTeam" class="onboard-text"></p>
+          </div>      
 
           <div class="spacer"></div>
           <div style="padding:0 80px;">
@@ -81,6 +87,23 @@
         redirectToPage("start.htm?cb=" + cb, 0.5, true);
 
       });
+
+      // existingTeam
+      const requestTeamNameEle = document.getElementById("requestTeamName"); 
+      const existingTeamEle = document.getElementById("existingTeam");
+
+      const teamName = localStorage.getItem("team_name");
+      
+      // Has teamname already been set?
+      if (teamName) {
+        requestTeamNameEle.style.display ='none';  
+        existingTeamEle.innerHTML   = "You've already named your team.<br /><strong>" + teamName + "</strong>";
+      } else {
+        existingTeamEle.style.display ='none';  
+      }
+      
+
+
 
     </script>
 
