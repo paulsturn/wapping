@@ -447,6 +447,34 @@ dialog::backdrop {
   }
 }
 
+.move-line {
+  width: 100%;
+  height: 2px;
+  
+  position: relative;
+  overflow: hidden;
+}
+
+.move-line::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--btm-io-info);
+  left: -100%;
+  animation: moveLine 3s ease-in-out;
+}
+
+@keyframes moveLine {
+  0% {
+      left: -100%;
+  }
+  100% {
+      left: 100%;
+  }
+}
+
+
 .time-bar {
   padding: 12px 0 12px 0;
   overflow: hidden;
