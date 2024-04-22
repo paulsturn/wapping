@@ -105,11 +105,9 @@ answers.forEach(box => {
 
         if (currentItem.access != '') {
           w_warningDiv.innerHTML = `${currentItem.access}`;
-          console.log("warning was not empty..." + currentItem.access + ".");
         }
         else {
           w_warningDiv.innerHTML = '';
-          console.log("warning was empty...");
         }
 
         // If have audio directions then show section
