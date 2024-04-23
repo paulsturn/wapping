@@ -124,7 +124,7 @@ const steps = [
         audio_talk: "",
         quiz: "123",
         image: "wap/TowerBridgeWharf202208-2.jpg",
-        video: "wap/Panning_London_Skyline_3840x2160.mp4",
+        video: "",
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
