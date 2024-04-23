@@ -144,7 +144,18 @@ function attachAnswerListners(){
 
               // split into seperate answers
               answers.split(",").forEach(function (item) {
-                answerOptions += '<div class="answer answer-enable" id="q' + qid + answerNum + '">' + item + '</div>';
+
+                // If item ends with a * then this is the correct one
+                let correctAnswer = isTheAnswer(item);
+
+                let correctFlag = "0";
+                if( correctAnswer ){
+                  correctFlag = "1"
+                  // Trim the flag from the answer text
+                  item = item.slice(0, item.length-1);
+                }
+
+                answerOptions += '<div data-correct="' + correctFlag + '" class="answer answer-enable" id="q' + qid + answerNum + '">' + item + '</div>';
                 radioOptions += '<input type="radio" name="boxRadio-opt-' + qid + '" id="opt-' + qid + answerNum + '" value="q' + qid + answerNum + '">';
                 answerNum ++;
               });
@@ -188,6 +199,9 @@ function attachAnswerListners(){
 // Functions
 //
 
+function isTheAnswer(str) {
+  return str.endsWith('*');
+}
 
 function resetAnimations(){
 
