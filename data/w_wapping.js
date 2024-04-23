@@ -253,10 +253,10 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "150-Question?[Answer1,Answer2,Answer3,Answer4]",   
-            q2: "151-Question?[Answer1,Answer2,Answer3,Answer4]", 
-            q3: "152-Question?[Answer1,Answer2,Answer3,Answer4]", 
-            q4: "153-Question?[Answer1,Answer2,Answer3,Answer4]",      
+            q1: "150-What was the name of the eccentric landlady who ran the pub in the Second World War?[Margaret Elliot,Margaret Murphy,Mog Murphy*,Mary Murphy]",   
+            q2: "151-What unusual task did she perform to servicemen and women during WWII?[Provided free food and drink to tem,Washed and pressed thir uniforms,Rifle training,Kept open all hours so that they could receive news of their loved ones*]", 
+            q3: "152-What was the name of the Street erected here in 1700?[Swallow Street,Bird Street*,Hand Street,Barley Street]", 
+            q4: "153-Who were the Wild Women of Wapping?[Infamous (and uncaught) female pirates,Female print workers ,Pioneering suffragists,Building conservationist group*]",      
         }   
     },
     { 
@@ -272,7 +272,11 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "110-Question?[Answer1,Answer2,Answer3,Answer4]",        
+            q1: "155-Who owned the pub and named it the “Old Star”??[Josehp Turner*,Joseph Swan,Tina Turner,Sophie Turner]", 
+            q2: "156-Who was the 1st landlady in the 1830s?[Sophie Booth*,Sophie Turner,Connie Booth,Sophie Kidd]",  
+            q3: "157-Why was the person described as “Puggy”?[They were less than 5 feet tall*,They liked bare knuckle fighting,They had lots of small dogs,They made marbles by hand]",  
+            q4: "158-What did this person do at the weekends?[They participated in drunken debauchery in the dockside taverns*,They rowed on the Thames,They trained as a solicitor,They were one of the choristers at St Paul’s cathedral]",  
+            q5: "159-What was the name of the witch who was found guilty of witch-practice on this spot in 1658?[Lydia Besom,Lydia Rogers*,Lydia Roberts,Lydia Wickham]",         
         }   
     },
     { 
@@ -288,7 +292,9 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "110-Question?[Answer1,Answer2,Answer3,Answer4]",        
+            q1: "160-What is the space named in the name of the road, which reflects a warehouse which housed a spice in by-gone times?[Turmeric,Nutmeg,Allspice,Cinnamon*]",    
+            q2: "161-This street was also the site of the Pear Tree Inn in the past. What happened there in December 1811 that brought notoriety to the area?[It was the site of a horrific fire in a high-rise dwelling,There were a number of gruesome murders*,The ale sold was found to be diluted with water frm the Thames,Cholera broke out at a communal pump]", 
+            q3: "162-Look down the end of the street towards the river and you will see a huge building at the end of Wapping High Street. What is the name on the building?[Battery Wharf,Gun Wharves*,Cannon Wharf,Cotton Wharves]",     
         }  
     },
     { 
@@ -319,7 +325,9 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "110-Question?[Answer1,Answer2,Answer3,Answer4]",        
+            q1: "165-Question?[Answer1,Answer2,Answer3,Answer4]",        
+            q2: "166-Question?[Answer1,Answer2,Answer3,Answer4]", 
+            q3: "167-Question?[Answer1,Answer2,Answer3,Answer4]", 
         }  
     },
     { 
@@ -350,7 +358,13 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "110-Question?[Answer1,Answer2,Answer3,Answer4]",        
+            q1: "171-Question?[Answer1,Answer2,Answer3,Answer4]",       
+            q1: "172-Question?[Answer1,Answer2,Answer3,Answer4]", 
+            q1: "173-Question?[Answer1,Answer2,Answer3,Answer4]", 
+            q1: "174-Question?[Answer1,Answer2,Answer3,Answer4]", 
+            q1: "175-Question?[Answer1,Answer2,Answer3,Answer4]", 
+            q1: "176-Question?[Answer1,Answer2,Answer3,Answer4]", 
+            q1: "177-Question?[Answer1,Answer2,Answer3,Answer4]",  
         } 
     },
     { 
@@ -365,8 +379,7 @@ const steps = [
         video: "",
         lat: "51.50623", 
         lon: "-0.07209",
-        questions: {
-            q1: "110-Question?[Answer1,Answer2,Answer3,Answer4]",        
+        questions: { 
         }  
     },
 
