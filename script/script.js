@@ -169,10 +169,10 @@ function attachAnswerListners(){
 
         if (subChildHtml == "") {
           subChildHtml += '<h3>Take a break, no questions for this stage</h3>';
+        } else {
+          // Add the 'Check answers button'
+          subChildHtml += '<div id="btnCheckAnswers" class="button button-200">Check answers</div>';
         }
-
-        // Add the 'Check answers button'
-        subChildHtml += '<div id="btnCheckAnswers" class="button button-200">Check answers</div>';
 
         // Render to page
         w_quiz.innerHTML = subChildHtml;
@@ -370,6 +370,11 @@ function createX(teamName){
   saveTeam(teamName);
 }
 
+function checkAnswers() {
+  console.log("CHECK ANSWERS NOW");
+};
+
+
 //
 // Event listners
 //
@@ -383,6 +388,10 @@ const directionsSwitch = document.getElementById("directionsToggle");
 
 const dialogBox = document.getElementById("dialogBox");
 const dialogMessage= document.getElementById("dialogMessage");
+
+const btnCheckAnswers = document.getElementById("btnCheckAnswers");
+
+
 
 
 // Only attach if addTeam is present
@@ -422,4 +431,8 @@ cameraSwitch.addEventListener("click", () => {
 
 directionsSwitch.addEventListener("click", () => {
   directionsPlayToggle();
+});
+
+btnCheckAnswers.addEventListener("click", () => {
+  checkAnswers();
 });
