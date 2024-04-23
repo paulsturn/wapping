@@ -44,11 +44,11 @@ const steps = [
         lat: "51.5065469", 
         lon: "-0.0718432",
         questions: {
-            q1: "101-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer, and question 2.[Brandy,Tea,Silk,Coffee beans]",
-            q2: "102-You may be familiar with the phrase “when the sun is over the yard-arm” which indicates when it is acceptable to have the first alcoholic drink of the day. What part of the Cutty Sark that you saw at the beginning of the tour is the “arm” that this phrase is referring to?[The ship’s wheel,The main mast,The horizontal beams from which the sails hang,The carved figure at the bow of the ship]",
-            q3: "103-Which famous architect designed the plans for the new dock in the early part of the 19th Century. He also designed one of the original footbridges that you are standing near.[Isambard Kingdom Brunel,Thomas Telford,Norman Foster,George Stephenson]",
-            q4: "104-What is unusual about the Dickens Inn?.[It's an original warehouse from the dock that was reconstructed here,It's only 10 years old, It was once nearly sold to be shipped to the US,Charles Dickens' mistress lived here]",
-            q5: "105-What is the link to Charles Dickens?[It was Charles Dickens' favourite watering hole,The first landlord was 'Samuel Crooge',It featured in a number of Charles Dickens' books,There is no link to Charles Dickens]",
+            q1: "101-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer[Brandy,Tea*,Silk,Coffee beans]",
+            q2: "102-What was the most famous clipper that regularly called at the Docks and now resides at Greenwich?[The Cutty Sark*,The Soverign of the seas,The Flying Cloud,Morning Cloud]",
+            q3: "103-Which famous architect designed the plans for the new dock in the early part of the 19th Century. He also designed one of the original footbridges that you are standing near.[Isambard Kingdom Brunel,Thomas Telford*,Norman Foster,George Stephenson]",
+            q4: "104-What is unusual about the Dickens Inn?.[It's an original warehouse from the dock that was reconstructed here*,It's only 10 years old, It was once nearly sold to be shipped to the US,Charles Dickens' mistress lived here]",
+            q5: "105-What is the link to Charles Dickens?[It was Charles Dickens' favourite watering hole,The first landlord was 'Samuel Crooge',It featured in a number of Charles Dickens' books,There is no link to Charles Dickens*]",
         } 
     },
     { 
@@ -64,9 +64,9 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "106-Which port official lives in the imposing house behind the wall? [The Dockmaster,The Commodore of the Pool of London,Admiral of the Fleet, The King]",
-            q2: "107-Which Queen of the Netherlands visited the docks in 1988 to commemorate 300 years of Anglo- Dutch maritime friendship?[Maxima,Juliana,Wilhelmina,Beatrix]",
-            q3: "108-The blue-edged plaque describes how the lock works to enable boats to leave the Thames and enter the docks. How much does the high and low tides on the Thames vary by?[Less than 5 meters,5-10 meters,9-10 meters,10-12 meters]",
+            q1: "106-Which port official lives in the imposing house behind the wall? [The Dockmaster*,The Commodore of the Pool of London,Admiral of the Fleet, The King]",
+            q2: "107-Which Queen of the Netherlands visited the docks in 1988 to commemorate 300 years of Anglo- Dutch maritime friendship?[Maxima,Juliana,Wilhelmina,Beatrix*]",
+            q3: "108-The blue-edged plaque describes how the lock works to enable boats to leave the Thames and enter the docks. How much does the high and low tides on the Thames vary by?[Less than 5 meters,5-10 meters,9-10 meters*,10-12 meters]",
         }  
     },
     { 

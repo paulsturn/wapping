@@ -10,49 +10,46 @@ displayCurrentItem();
 // Quiz code tests
 //------------------------------------------------------------------------------------
 
-const answers = document.querySelectorAll('.answer');
-// const radioButtons = document.querySelectorAll('input[name="qRadio"]');
 
-let qidForRadio = "";
+function attachAnswerListners(){
 
-// ATTACH LISTNERS TO ANSWER BOXES
-// ---------------------------------------
+  const answers = document.querySelectorAll('.answer');
+  // const radioButtons = document.querySelectorAll('input[name="qRadio"]');
 
-answers.forEach(box => {
-    box.addEventListener('click', () => {
+  let qidForRadio = "";
+  console.log("attach listners to all answer boxes");
 
-      answers.forEach(b => {
+  answers.forEach(box => {
+      box.addEventListener('click', () => {
 
-        // Get the parent ele
-          const parentElement = box.parentElement;
-          const classNames = parentElement.classList;
-          const qid = classNames[1];
+        answers.forEach(b => {
 
-          // select all class = qid
-          const abc = document.querySelectorAll('.options.' + qid +' .answer');
-          abc.forEach(def => {
-            def.classList.remove('answer-selected');
-          });
+          // Get the parent ele
+            const parentElement = box.parentElement;
+            const classNames = parentElement.classList;
+            const qid = classNames[1];
 
-          qidForRadio = qid;
+            // select all class = qid
+            const abc = document.querySelectorAll('.options.' + qid +' .answer');
+            abc.forEach(def => {
+              def.classList.remove('answer-selected');
+            });
+            qidForRadio = qid;
+          });  
 
-        });  
+          box.classList.add('answer-selected');
+          let www = box.id;
+          let ele = www.split('-');
+          let boxNum = ele[1];
 
-        box.classList.add('answer-selected');
-        let www = box.id;
-        let ele = www.split('-');
-        let boxNum = ele[1];
+          const correspondingRadio = document.querySelector(`input[id="${qidForRadio}${boxNum}"]`);
+          correspondingRadio.checked = true;
 
-        const correspondingRadio = document.querySelector(`input[id="${qidForRadio}${boxNum}"]`);
-        correspondingRadio.checked = true;
-
-        let ans = qidForRadio + ','+ boxNum;
-        saveAnswer(ans);
-
-        
-    });
-});
-
+          let ans = qidForRadio + ','+ boxNum;
+          saveAnswer(ans);        
+      });
+  });
+}
 
 //------------------------------------------------------------------------------------
 
@@ -176,6 +173,9 @@ answers.forEach(box => {
     } else {
         console.log("No more items in this direction.");
     }
+
+    // Attach answer listners
+    attachAnswerListners();
 
     // Do post display options
     resetAnimations();
