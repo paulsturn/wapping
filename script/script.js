@@ -4,6 +4,9 @@ import { saveTeam, saveAnswer } from "./data.js";
 // Initialize an index to keep track of the current item
 let currentIndex = 0;
 
+// Keep teamname for use thoughout
+const teamName = getTeamNameLocal();
+
 // Display first step
 displayCurrentItem();
 
@@ -43,7 +46,7 @@ function attachAnswerListners(){
           const correspondingRadio = document.querySelector(`input[id="${qidForRadio}${boxNum}"]`);
           correspondingRadio.checked = true;
 
-          let ans = qidForRadio + ','+ boxNum;
+          let ans = teamName + "|" + qidForRadio + '|'+ boxNum;
           saveAnswer(ans);        
       });
   });
