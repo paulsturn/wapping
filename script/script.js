@@ -171,6 +171,10 @@ function attachAnswerListners(){
           subChildHtml += '<h3>Take a break, no questions for this stage</h3>';
         }
 
+        // Add the 'Check answers button'
+        subChildHtml += '<div id="btnCheckAnswers" class="button button-200">Check answers</div>';
+
+        // Render to page
         w_quiz.innerHTML = subChildHtml;
 
         // If have audio talk then show section
@@ -284,12 +288,6 @@ function scrollToTop() {
     window.scrollTo(0, 0); 
 } 
 
-
-
-// Audio
-// Get the audio element
-var audio = document.getElementById("myAudio1");
-
 // Function to play or pause the audio
 function togglePlayPause(audioElement) {
   if (audioElement.paused) {
@@ -297,14 +295,6 @@ function togglePlayPause(audioElement) {
   } else {
     audioElement.pause();
   }
-
-
-
-    // myAudio.pause();
-    // myAudio.currentTime = 0;
-    // myAudio.src = 'sound.mp3';
-
-
 }
 
 // Event listener for the play/pause button (you can replace this with your own button or trigger)
