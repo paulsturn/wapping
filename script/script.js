@@ -118,8 +118,6 @@ function attachAnswerListners(){
 
         // Quiz section
         let subChildHtml = "";
-        // subChildHtml += '<h3>No questions for this stage</h3>';
-
 
         for (const key in currentItem.questions) {
             if (currentItem.questions.hasOwnProperty(key)) {
@@ -161,7 +159,7 @@ function attachAnswerListners(){
               });
 
               // append to result
-              subChildHtml += '<div class="q-title">QUESTION</div>';
+              subChildHtml += '<div class="q-title">QUESTION ' + qid + '</div>';
               subChildHtml += `<p class="question">${question}</p>`;
               subChildHtml += `<div class="options opt-${qid}">${answerOptions}</div>`;
               subChildHtml += `<div id="radioForm" class="hide">${radioOptions}</div>`;
