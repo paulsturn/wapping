@@ -1350,6 +1350,14 @@ background: -webkit-linear-gradient(90deg, hsla(239, 94%, 14%, 1) 0%, hsla(190, 
     #controls {
       left: 400px;
     }
+    .animated-element {
+      border-radius:1800px;
+    }
+    .animated-element {
+      border-radius:1800px;
+    }
+    
+    
   }
   
   
