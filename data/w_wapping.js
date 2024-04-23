@@ -358,13 +358,13 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "171-Question?[Answer1,Answer2,Answer3,Answer4]",       
-            q1: "172-Question?[Answer1,Answer2,Answer3,Answer4]", 
-            q1: "173-Question?[Answer1,Answer2,Answer3,Answer4]", 
-            q1: "174-Question?[Answer1,Answer2,Answer3,Answer4]", 
-            q1: "175-Question?[Answer1,Answer2,Answer3,Answer4]", 
-            q1: "176-Question?[Answer1,Answer2,Answer3,Answer4]", 
-            q1: "177-Question?[Answer1,Answer2,Answer3,Answer4]",  
+            q1: "171-What has not been a former name of the Prospect of Whitby?[Devil's Taven,The Pelican,The Zebra,The King's Head*]",       
+            q2: "172-What is the oldest part of the pub still intact?[The pewter-topped bar,The staircase to the upper floor,The stone floor*,The Chimney]", 
+            q3: "173-The pub was a meeting place for sailors, smugglers, cut-throats and footpads. What is a “footpad”?[A cordwainer,A thief specialising in pedestrian victims*,A highwayman,A pickpocket]", 
+            q4: "174-If you look out of the rear of the building at the river you will see a replica gallows and noose. What happened to the bodies of the  pirates that were executed there?[They were cut down immediately and the bodies were thrown  into the river,Their bodies were taken to Guy’s Hospital to be used for dissection practice,The bodies were left until 3 tides had flowed over them*,They were left for the local wildlife to feed upon]", 
+            q5: "175-What unusual event happened at the pub in 1953??[It was visited by Royalty,It burnt down,It was raided by armed robbers*,It was visited by Tom Cruise whilst filming Mission Impossible]", 
+            q6: "176-How many monarchs has the inn coincided with? There is a helpful plaque on the stairs to help you.[21,22*,23,24]", 
+            q7: "177-What popular comedy series had an episode set here?[As Time Goes By,The Young Ones,Birds of a Feather,Only Fools and Horses*]",  
         } 
     },
     { 
