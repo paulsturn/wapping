@@ -154,10 +154,11 @@ function attachAnswerListners(){
               subChildHtml += `<div class="options opt-${qid}">${answerOptions}</div>`;
               subChildHtml += `<div id="radioForm" class="hide">${radioOptions}</div>`;
               
-            } else {
-              // No questions here
-              subChildHtml += '<h3>No questions for this stage</h3>';
-            }
+            } 
+        }
+
+        if (subChildHtml == "") {
+          subChildHtml += '<h3>Take a break, no questions for this stage</h3>';
         }
 
         w_quiz.innerHTML = subChildHtml;
