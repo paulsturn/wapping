@@ -120,13 +120,13 @@ answers.forEach(box => {
 
         // Quiz section
         let subChildHtml = "";
-        subChildHtml += '<h3>No questions for this stage</h3>';
+        // subChildHtml += '<h3>No questions for this stage</h3>';
 
 
         for (const key in currentItem.questions) {
             if (currentItem.questions.hasOwnProperty(key)) {
 
-              subChildHtml = '';
+              // subChildHtml = '';
 
               // Get question ID
               let qid = extractQuestionID(currentItem.questions[key]);
