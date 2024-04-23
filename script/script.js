@@ -120,9 +120,13 @@ answers.forEach(box => {
 
         // Quiz section
         let subChildHtml = "";
+        subChildHtml += '<h3>No questions for this stage</h3>';
+
 
         for (const key in currentItem.questions) {
             if (currentItem.questions.hasOwnProperty(key)) {
+
+              subChildHtml = '';
 
               // Get question ID
               let qid = extractQuestionID(currentItem.questions[key]);
@@ -152,6 +156,9 @@ answers.forEach(box => {
               subChildHtml += `<div class="options opt-${qid}">${answerOptions}</div>`;
               subChildHtml += `<div id="radioForm" class="hide">${radioOptions}</div>`;
               
+            } else {
+              // No questions here
+              subChildHtml += '<h3>No questions for this stage</h3>';
             }
         }
 
