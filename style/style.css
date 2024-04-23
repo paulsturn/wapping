@@ -1327,3 +1327,23 @@ background: -webkit-linear-gradient(90deg, hsla(239, 94%, 14%, 1) 0%, hsla(190, 
     display: inline-block;
     line-height: 16px !important;
   }
+
+
+
+
+  /* Style for desktop */
+  @media (min-width: 600px) and (max-width: 2280px){
+    body{
+      width:478px;
+    }
+    .grunge-100 {
+      background-size: 480px;
+      background-repeat: repeat-y;
+      background-position-x: left;
+    }
+    #controls {
+      left: 400px;
+    }
+  }
+  
+  
