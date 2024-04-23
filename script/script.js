@@ -14,10 +14,8 @@ displayCurrentItem();
 function attachAnswerListners(){
 
   const answers = document.querySelectorAll('.answer');
-  // const radioButtons = document.querySelectorAll('input[name="qRadio"]');
 
   let qidForRadio = "";
-  console.log("attach listners to all answer boxes");
 
   answers.forEach(box => {
       box.addEventListener('click', () => {
