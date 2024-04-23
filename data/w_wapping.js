@@ -325,9 +325,9 @@ const steps = [
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
-            q1: "165-Question?[Answer1,Answer2,Answer3,Answer4]",        
-            q2: "166-Question?[Answer1,Answer2,Answer3,Answer4]", 
-            q3: "167-Question?[Answer1,Answer2,Answer3,Answer4]", 
+            q1: "165-One of the most famous death sentences carried out was on Captain Kidd.  He is remembered at another tavern on Wapping High Street. His death was well documented but what was unusual about it?[A failed escape attempts delayed the hanging 3 times,He had to be hanged twice as the rope snapped the first time*,Kidd’s wife turned up and begged for Kidd to be pardoned,The execution was delayed until the tide came back in]",        
+            q2: "166-Which famous Hollywood actor played Captain Kidd in the 1945 film?[Stewart Grainger,Vincent Price,Errol Flynn,Charles Laughton*]", 
+            q3: "167-In which popular Action-adventure video game includes finding map pieces that Captain Kidd has supposedly given to crew members??[Assassin's Creed III*,Sea of Theives,Fallout,Blackwake I]", 
         }  
     },
     { 
