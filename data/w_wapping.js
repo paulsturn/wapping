@@ -13,7 +13,7 @@ const steps = [
         lat: "51.5065202",
         lon: "-0.0704913",
         questions: {
-            q1: "000-Questions relating to the location will appear like this. [London,Paris,New York,Rome]",
+            q1: "000-Questions relating to the location will appear like this. [London*,Paris,New York,Rome]",
         } 
     },
     { 

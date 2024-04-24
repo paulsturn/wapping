@@ -329,31 +329,19 @@ p, li{
   color:#000;
 }
 
+ul.check{
+  padding:0;
+}
+ul.check li{
+  font-size:15px;
+  margin-bottom:3px;
+}
+
+
+
 .hide{
   opacity: 0;
 }
-/* .answer .correct{
-    background: linear-gradient(to left, #588901 50%, #0000 50%);
-    background-size: 200% 120%;
-    background-position: right bottom;
-    transition: all .25s ease-out;
-    color:#fff;
-    font-weight:600;
-    font-size:28px;
-}
-
-.answer .wrong{
-    transition: all .95s ease-out;
-    opacity:.35;
-} */
-
-
-/* .animation-container {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-} */
 
 .animated-element {
   position: absolute;

@@ -70,8 +70,10 @@
 
       </div>
 
-      <div class="inner-spaced quiz">
-
+      <div class="inner-spaced">
+        <div id="btnCheckAnswers" class="button button-200 button-check">Check answers</div>
+        <br />
+        <br/>
       </div>
 
     </div>
@@ -105,6 +107,17 @@
 <div id="camera">
 </div>
 
+<div id="burst" class=""></div>
+
+<dialog id="myDialog">
+  <div class="dialog-inner">
+    <div id="dialogMessage" class="dialog-message">
+      No message :-(
+    </div>
+    <button onClick="myDialog.close()" class="button dialog-button">OK</button>
+  </div>
+</dialog>
+
 <!-- Placeholder elements -->
 <div id="addTeamName"></div>
 
@@ -136,16 +149,14 @@
       easing: x => x
     });
 
-
     // show team name in header
     const teamNameEle = document.getElementById("currentTeamName");
     teamNameEle.textContent = localStorage.getItem("team_name"); // getTeamNameLocal();
 
-
   </script>
 
-<script src="data/w_wapping.js?cb=1.0.3"></script>  
-<script src="script/script.min.js?cb=1.0.4" type="module"></script>
+  <script src="data/w_wapping.js?cb=1.0.5"></script>  
+  <script src="script/script.min.js?cb=1.0.5" type="module"></script>
 
 </body>
 </html>

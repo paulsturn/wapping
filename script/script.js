@@ -85,6 +85,8 @@ function attachAnswerListners(){
         const w_warningDiv = document.getElementById('w_warning');
         const w_mediaDiv1 = document.getElementById('w_media_1');
 
+        const b_checkAnswers = document.getElementById('btnCheckAnswers');
+
         w_titleDiv.innerHTML = `${currentItem.name}`;
         w_contentDiv.innerHTML = `${currentItem.place}`;
         w_image.innerHTML = `<img src='assets/img/${currentItem.image}'>`;
@@ -169,9 +171,11 @@ function attachAnswerListners(){
 
         if (subChildHtml == "") {
           subChildHtml += '<h3>Take a break, no questions for this stage</h3>';
+          // Hide check answers button
+          b_checkAnswers.style.display = 'none';
         } else {
-          // Add the 'Check answers button'
-          subChildHtml += '<div id="btnCheckAnswers" class="button button-200">Check answers</div>';
+          // Show check answers button
+          b_checkAnswers.style.display = 'block';
         }
 
         // Render to page
@@ -370,10 +374,77 @@ function createX(teamName){
   saveTeam(teamName);
 }
 
+
+
 function checkAnswers() {
-  console.log("CHECK ANSWERS NOW");
+
+  let answerText = "";
+  let questionNum = 1;
+
+  const myDialogEle = document.getElementById("myDialog");
+  myDialogEle.showModal();
+
+  const dialogMessageEle = document.getElementById("dialogMessage");
+  dialogMessageEle.innerHTML = '<h4>Checking your answers...</h4>';
+
+  // Get all question blocks
+  const questions = document.querySelectorAll('.options');
+
+  questions.forEach(question => {
+    const answers = question.children;
+
+    let questionId = ""; // Not yet used
+    let notAttempted = true;
+    let correctAnswer = false;
+
+    for (let i=0; i<answers.length; i++) {
+      let choice = answers[i];
+
+      let id = choice.getAttribute("id");
+      let selected = isAnswerChosen(choice.getAttribute("class"));
+      let correct = !!+choice.getAttribute("data-correct");
+
+      if (selected){
+        notAttempted = false;
+      }
+
+      if (selected & correct){
+        correctAnswer = true;
+      }
+
+      questionId = id;
+
+    }
+
+    answerText += "<li>";
+    answerText += "Q" + questionNum + ". ";
+
+    // Is there an attempt?
+    if (notAttempted){
+      answerText += "Not answered";
+    }
+    else {
+      // Is attempt correct?
+      if (correctAnswer){
+        answerText += "Correct";
+      } else {
+        answerText += "Wrong";
+      }
+    }
+
+    answerText += "</li>";
+
+    questionNum ++;
+  });
+
+  dialogMessageEle.innerHTML += "<ul class='check'>" + answerText + "</ul>";
+
 };
 
+
+function isAnswerChosen(str){
+  return str.toLowerCase().includes('answer-selected');
+}
 
 //
 // Event listners
@@ -386,9 +457,11 @@ const mapSwitch = document.getElementById("mapToggle");
 const cameraSwitch = document.getElementById("cameraToggle");
 const directionsSwitch = document.getElementById("directionsToggle");
 
-const dialogBox = document.getElementById("dialogBox");
-const dialogMessage= document.getElementById("dialogMessage");
+// const dialogBox = document.getElementById("dialogBox");
+// const dialogMessage= document.getElementById("dialogMessage");
 
+
+// set per answer block..
 const btnCheckAnswers = document.getElementById("btnCheckAnswers");
 
 
@@ -425,9 +498,9 @@ mapSwitch.addEventListener("click", () => {
   mapToggle();
 });
 
-cameraSwitch.addEventListener("click", () => {
-  cameraToggle();
-});
+// cameraSwitch.addEventListener("click", () => {
+//   cameraToggle();
+// });
 
 directionsSwitch.addEventListener("click", () => {
   directionsPlayToggle();
