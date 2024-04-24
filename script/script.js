@@ -110,7 +110,7 @@ function attachAnswerListners(){
 
         // If have audio directions then show section
         if (currentItem.audio_direction != '') {
-          w_directions.innerHTML = `<div class="directions-wrap"> <div class="audio-cntr"><audio id="audioDirections" autoplay controls controlsList="nodownload"><source src="${currentItem.audio_direction}" type="audio/mp3"></audio></div></div>`;
+          w_directions.innerHTML = `<div class="directions-wrap"> <div class="audio-cntr"><audio id="audioDirections" controls controlsList="nodownload"><source src="${currentItem.audio_direction}" type="audio/mp3"></audio></div></div>`;
         }
         else {
           w_directions.innerHTML = '';
