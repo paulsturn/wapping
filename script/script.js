@@ -246,6 +246,19 @@ function directionsPlayToggle(){
   togglePlayPause(player);
 
   // Material icon -> volume_off
+  iconDirVol
+  var iconDirVol = document.getElementById("iconDirVol");
+  
+  // volume_up / volume_off
+  console.log(iconDirVol.innerHTML);
+  let curState = iconDirVol.innerHTML;
+
+  if ( curState == "volume_up"){
+    iconDirVol.innerHTML = "volume_off";
+  }
+  else {
+    iconDirVol.innerHTML = "volume_up";
+  }
 
 }
 
