@@ -752,12 +752,12 @@ dialog::backdrop {
 .control-wrapper{
     display:flex;
     flex-direction: row;
+    justify-content: space-between;
     padding: var(--padding-200);
 }
 
 .control{
     display:flex;
-    flex-grow: 1;
     text-align:center;
     flex-direction:column;
     color:#f2f2f2;
