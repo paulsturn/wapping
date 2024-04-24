@@ -10,6 +10,7 @@ const app = initializeApp(appSettings);
 const database = getDatabase(app);
 const teamsInDB = ref(database, "teams");
 const answersInDB = ref(database, "answers");
+const resultsInDB = ref(database, "results");
 
 // const inputFieldEl = document.getElementById("teamName");
 // const adButtonEl = document.getElementById ("addTeamName");
@@ -32,4 +33,6 @@ export function saveAnswer(answer) {
 
 }
 
-
+export function saveResult(result) {
+    push(resultsInDB, result);
+}

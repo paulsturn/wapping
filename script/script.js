@@ -1,5 +1,5 @@
 
-import { saveTeam, saveAnswer } from "./data.js";
+import { saveTeam, saveAnswer, saveResult } from "./data.js";
 
 // Initialize an index to keep track of the current item
 let currentIndex = 0;
@@ -45,9 +45,7 @@ function attachAnswerListners(){
 
           const correspondingRadio = document.querySelector(`input[id="${qidForRadio}${boxNum}"]`);
           correspondingRadio.checked = true;
-
-          let ans = teamName + "|" + qidForRadio + '|'+ boxNum;
-          saveAnswer(ans);        
+    
       });
   });
 }
@@ -359,14 +357,25 @@ function removeTextInBrackets(inputString) {
 
 
 function setTeamNameLocal(teamName){
-  // Save Team name to local storage
-  localStorage.setItem("team_name", teamName);
+  console.log('setTeamnamelocal');
+  setLocalData("team_name",teamName);
+  // localStorage.setItem("team_name", teamName);
 };
 
-function getTeamNameLocal(teamName){
-  // Get Team name from local storage
-  return localStorage.getItem("team_name");
+function getTeamNameLocal(){
+  return getLocalData("team_name");
+  // return localStorage.getItem("team_name");
 };
+
+
+function setLocalData(key, data){
+  console.log('setLocaldata' + ' ' + key + ' ' + data);
+  localStorage.setItem(key, data);
+}
+
+function getLocalData(key){
+  return localStorage.getItem("team_name");
+}
 
 
 function createX(teamName){
@@ -436,6 +445,12 @@ function checkAnswers() {
   });
 
   dialogMessageEle.innerHTML += "<ul class='check'>" + answerText + "</ul>";
+
+
+  // Save the results to DB
+  let result = teamName + "|" + answerText;
+  saveResult(result);
+
 
 };
 
