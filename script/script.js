@@ -170,7 +170,7 @@ function attachAnswerListners(){
         }
 
         if (subChildHtml == "") {
-          subChildHtml += '<h3>Take a break, no questions for this stage</h3>';
+          subChildHtml += '<h3>Take a break, there are no questions for this stage...</h3>';
           // Hide check answers button
           b_checkAnswers.style.display = 'none';
         } else {
@@ -426,14 +426,12 @@ function checkAnswers() {
     else {
       // Is attempt correct?
       if (correctAnswer){
-        answerText += "Correct";
+        answerText += "<span class='correct'>Correct</span>";
       } else {
-        answerText += "Wrong";
+        answerText += "<span class='wrong'>Wrong</span>";
       }
     }
-
     answerText += "</li>";
-
     questionNum ++;
   });
 

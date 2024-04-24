@@ -49,7 +49,7 @@ body {
 h1, h2,h3, h4, h4, h5,h6{
     font-family: 'Quicksand', sans-serif;
     line-height:1.4;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
 }
 
 p, li{
@@ -267,9 +267,14 @@ p, li{
   background-color: var(--btm-white-300);
   margin-top: 12px;
   padding-top: 12px;
-  padding-bottom: 24px;
-  border-top: solid 1px #a5a5a5;
-  
+  padding-bottom: 5px;
+  margin-bottom: 18px;
+  border-top: dotted 1px #a5a5a5;
+  border-bottom: dotted 1px #a5a5a5;
+}
+#w_quiz h3{
+  font-size:16px;
+  text-align:center;
 }
 
 .q-title{
@@ -331,10 +336,18 @@ p, li{
 
 ul.check{
   padding:0;
+  text-align: left;
 }
 ul.check li{
   font-size:15px;
   margin-bottom:3px;
+}
+
+li span.wrong{
+  color:var(--btm-accent-100);
+}
+li span.correct{
+  color:var(--btm-quiz-correct);
 }
 
 
