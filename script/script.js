@@ -447,9 +447,15 @@ function checkAnswers() {
   dialogMessageEle.innerHTML += "<ul class='check'>" + answerText + "</ul>";
 
 
-  // Save the results to DB
-  let result = teamName + "|" + answerText;
-  saveResult(result);
+  // Save compressed results to DB
+  let answerTextComp = answerText;
+  answerTextComp = answerTextComp.replaceAll("Not answered", "NA");
+  answerTextComp = answerTextComp.replaceAll("</li>", ",");
+  answerTextComp = answerTextComp.replace(/(<([^>]+)>)/ig, '');
+
+  let compResult = teamName + "|" + answerTextComp;
+
+  saveResult(compResult);
 
 
 };
