@@ -8,7 +8,7 @@ const steps = [
         audio_direction: "",
         audio_talk: "",
         image: "wap/pirate-ai.jpg",
-        video: "https://player.vimeo.com/video/938299336",
+        video: "https://player.vimeo.com/video/939126915",
         quiz: "0",
         lat: "51.5065202",
         lon: "-0.0704913",
@@ -267,7 +267,7 @@ const steps = [
         audio_talk: "assets/aud/his/TurnersOldStarVOX_02.mp3",
         quiz: "134",
         image: "wap/turners-old-star-london.jpg",
-        video: "wap/SEP_OldStar2.mp4",
+        video: "https://player.vimeo.com/video/938299518",
         lat: "51.50623", 
         lon: "-0.07209",
         questions: {
