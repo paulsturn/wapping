@@ -10,8 +10,8 @@ const steps = [
         image: "wap/pirate-ai.jpg",
         video: "https://player.vimeo.com/video/939126915",
         quiz: "0",
-        lat: "51.5065202",
-        lon: "-0.0704913",
+        lat: "51.5084642",
+        lon: "-0.07371429",
         questions: {
         } 
     },
@@ -25,8 +25,8 @@ const steps = [
         image: "wap/StKatherinesDocks202208.jpg",
         video: "",
         quiz: "233",
-        lat: "51.5065202",
-        lon: "-0.0704913",
+        lat: "51.50773602",
+        lon: "-0.071289267",
         questions: {
         } 
     },
@@ -40,8 +40,8 @@ const steps = [
         image: "wap/DickensInn202208.jpg",
         video: "",
         quiz: "2",
-        lat: "51.5065469", 
-        lon: "-0.0718432",
+        lat: "51.50668847", 
+        lon: "-0.070470893",
         questions: {
             q1: "101-What predominant goods were imported into the dock, that it was most famous for, in the 19th Century? The black plaque you will have read on the way to the  Dickens Inn will help you with this answer[Brandy,Tea*,Silk,Coffee beans]",
             q2: "102-What was the most famous clipper that regularly called at the Docks and now resides at Greenwich?[The Cutty Sark*,The Soverign of the seas,The Flying Cloud,Morning Cloud]",
@@ -60,8 +60,8 @@ const steps = [
         quiz: "121",
         image: "wap/DockEntrance202208.jpg",
         video: "",
-        lat: "51.50623", 
-        lon: "-0.07209",
+        lat: "51.5062640", 
+        lon: "-0.07213126634",
         questions: {
             q1: "106-Which port official lives in the imposing house behind the wall? [The Dockmaster*,The Commodore of the Pool of London,Admiral of the Fleet, The King]",
             q2: "107-Which Queen of the Netherlands visited the docks in 1988 to commemorate 300 years of Anglo- Dutch maritime friendship?[Maxima,Juliana,Wilhelmina,Beatrix*]",
@@ -78,8 +78,8 @@ const steps = [
         quiz: "0",
         image: "wap/Harrisons.jpg",
         video: "",
-        lat: "51.50623", 
-        lon: "-0.07209",
+        lat: "51.506343", 
+        lon: "-0.07163543",
         questions: {
         }  
     },
@@ -93,8 +93,8 @@ const steps = [
         quiz: "122",
         image: "wap/Docklands 1803.jpeg",
         video: "",
-        lat: "51.50623", 
-        lon: "-0.07209",
+        lat: "51.505711487", 
+        lon: "-0.070536416",
         questions: {
             q1: "110-This is the home to HMS President, which is the Royal Naval Reserve London. When was the Foundation Stone for the building laid?[31st July 1987,30th July 1986*,1st August 1989,1st August 1990]",
         }  
@@ -109,8 +109,8 @@ const steps = [
         quiz: "0",
         image: "wap/AldermanStairs202208-2.jpg",
         video: "",
-        lat: "51.50623", 
-        lon: "-0.07209",
+        lat: "51.50500287", 
+        lon: "-0.070261248",
         questions: {
         }  
     },
@@ -124,8 +124,8 @@ const steps = [
         quiz: "123",
         image: "wap/TowerBridgeWharf202208-2.jpg",
         video: "",
-        lat: "51.50623", 
-        lon: "-0.07209",
+        lat: "51.5037317", 
+        lon: "-0.0650531",
         questions: {
             q1: "115-Name the River?[Tyburn,Effra,Neckinger*,Tide]",        
             q2: "116-On the opposite side of the river is the Shard, which is the tallest building in Britain. How many storeys does it have?[79,88,95*,99]",        
@@ -142,8 +142,8 @@ const steps = [
         quiz: "125",
         image: "wap/HermitageGardens202208-1.jpg",
         video: "",
-        lat: "51.50623", 
-        lon: "-0.07209",
+        lat: "51.50459751", 
+        lon: "-0.0679076725",
         questions: {
             q1: "120-What was the bombing of London called in WWII?[The London Bombing,The Blitz*,The London Firestorm,The Lightning War]",
             q2: "121-What does the dove symbolise according to the information plaque?[Hope*,Courage,Love,Peace]",  
@@ -161,8 +161,8 @@ const steps = [
         quiz: "126",
         image: "wap/TownOfRamsgatePub202208-1.jpg",
         video: "",
-        lat: "51.50623", 
-        lon: "-0.07209",
+        lat: "51.503613236", 
+        lon: "-0.06242594352",
         questions: {
             q1: "125-On the right is No.3. In the past what was No.3 used for?[A doctor's surgery,A pharmacy,A post office,Customs office*]",  
         }  
@@ -177,8 +177,8 @@ const steps = [
         quiz: "128",
         image: "wap/TownOfRamsgateSteps202208.jpg",
         video: "",
-        lat: "51.50623", 
-        lon: "-0.07209",
+        lat: "51.5034502", 
+        lon: "-0.0619445540",
         questions: {
             q1: "130-The location of the stairs had to be memorised by the apprentice watermen. London Black Cab drivers have to pass a similar test. What is it called[The Knowledge*,The Housego,The Cabbie Exam,The London A-Z Test]",      
             q1: "131-At low tide you might be able to see a post near the steps. What was this post used for?[To enable the watermen to tie up their boats so passengers could disembark,To tie condemed pirates to so they would drown when the tide rose*,For River Police to moor their boats to,To enable easy access to the native oyster beds in the Thames ]",       
@@ -195,8 +195,8 @@ const steps = [
         quiz: "129",
         image: "wap/TownOfRamsgatePub202208-2.jpg",
         video: "",
-        lat: "51.50623", 
-        lon: "-0.07209",
+        lat: "51.5034502", 
+        lon: "-0.0619445540",
         questions: {
             q1: "135-Which notorious Lord Chief Justice was captured whilst trying to escape by boat from here?[Judge Rinder,Judge Frollo,Judge Jeffries*,Judge Reinhold]", 
             q2: "136-What was he disguised as when captured?[A woman,A sailor*,A ferryboatman,A merchant]", 
@@ -213,8 +213,8 @@ const steps = [
         quiz: "131",
         image: "wap/TownOfRamsgateGates202208.jpg",
         video: "",
-        lat: "51.50623", 
-        lon: "-0.07209",
+        lat: "51.5", 
+        lon: "-0.07",
         questions: {
             q1: "140-Who was buried in this churchyard on 1648?[Thomas Cromwell,Thomas à Becket,Thomas Gainsborough,Thomas Rainsborough*]",
             q2: "141-What rank did this person hold in the New Model Army?[General,Colonel*,Admmiarl,Cavalier]",  
@@ -231,8 +231,8 @@ const steps = [
         quiz: "132",
         image: "wap/Figures202208.jpg",
         video: "",
-        lat: "51.50623", 
-        lon: "-0.07209",
+        lat: "51.5", 
+        lon: "-0.07",
         questions: {
             q1: "145-What are the figure on the building?[A girl and a boy*,A nun and a priest,A teacher and a sailor,A shepherdess and shepherd]", 
             q2: "146-When was the building founded?[1666,1695*,1760,1766]",
@@ -249,8 +249,8 @@ const steps = [
         quiz: "133",
         image: "wap/TheTurksHead202208.jpg",
         video: "",
-        lat: "51.50623", 
-        lon: "-0.07209",
+        lat: "51.504187770", 
+        lon: "-0.0613276126",
         questions: {
             q1: "150-What was the name of the eccentric landlady who ran the pub in the Second World War?[Margaret Elliot,Margaret Murphy,Mog Murphy*,Mary Murphy]",   
             q2: "151-What unusual task did she perform to servicemen and women during WWII?[Provided free food and drink to tem,Washed and pressed thir uniforms,Rifle training,Kept open all hours so that they could receive news of their loved ones*]", 
@@ -268,8 +268,8 @@ const steps = [
         quiz: "134",
         image: "wap/turners-old-star-london.jpg",
         video: "https://player.vimeo.com/video/938299518",
-        lat: "51.50623", 
-        lon: "-0.07209",
+        lat: "51.50536098", 
+        lon: "-0.059436072",
         questions: {
             q1: "155-Who owned the pub and named it the “Old Star”??[Josehp Turner*,Joseph Swan,Tina Turner,Sophie Turner]", 
             q2: "156-Who was the 1st landlady in the 1830s?[Sophie Booth*,Sophie Turner,Connie Booth,Sophie Kidd]",  
@@ -288,8 +288,8 @@ const steps = [
         quiz: "135",
         image: "wap/no-image.jpg",
         video: "",
-        lat: "51.50623", 
-        lon: "-0.07209",
+        lat: "51.5", 
+        lon: "-0.07",
         questions: {
             q1: "160-What is the space named in the name of the road, which reflects a warehouse which housed a spice in by-gone times?[Turmeric,Nutmeg,Allspice,Cinnamon*]",    
             q2: "161-This street was also the site of the Pear Tree Inn in the past. What happened there in December 1811 that brought notoriety to the area?[It was the site of a horrific fire in a high-rise dwelling,There were a number of gruesome murders*,The ale sold was found to be diluted with water frm the Thames,Cholera broke out at a communal pump]", 
@@ -306,8 +306,8 @@ const steps = [
         quiz: "0",
         image: "wap/no-image.jpg",
         video: "",
-        lat: "51.50623", 
-        lon: "-0.07209",
+        lat: "51.5", 
+        lon: "-0.07",
         questions: {      
         }  
     },
@@ -321,8 +321,8 @@ const steps = [
         quiz: "138",
         image: "wap/no-image.jpg",
         video: "wap/BTM wapping RAW .mp4",
-        lat: "51.50623", 
-        lon: "-0.07209",
+        lat: "51.50692624", 
+        lon: "-0.0511035708",
         questions: {
             q1: "165-One of the most famous death sentences carried out was on Captain Kidd.  He is remembered at another tavern on Wapping High Street. His death was well documented but what was unusual about it?[A failed escape attempts delayed the hanging 3 times,He had to be hanged twice as the rope snapped the first time*,Kidd’s wife turned up and begged for Kidd to be pardoned,The execution was delayed until the tide came back in]",        
             q2: "166-Which famous Hollywood actor played Captain Kidd in the 1945 film?[Stewart Grainger,Vincent Price,Errol Flynn,Charles Laughton*]", 
@@ -339,8 +339,8 @@ const steps = [
         quiz: "0",
         image: "wap/no-image.jpg",
         video: "",
-        lat: "51.50623", 
-        lon: "-0.07209",
+        lat: "51.551.50713738", 
+        lon: " -0.051164179004",
         questions: {      
         }  
     },
@@ -354,8 +354,8 @@ const steps = [
         quiz: "139",
         image: "wap/Wapping6.jpg",
         video: "",
-        lat: "51.50623", 
-        lon: "-0.07209",
+        lat: "51.551.50713738", 
+        lon: " -0.051164179004",
         questions: {
             q1: "171-What has not been a former name of the Prospect of Whitby?[Devil's Taven,The Pelican,The Zebra,The King's Head*]",       
             q2: "172-What is the oldest part of the pub still intact?[The pewter-topped bar,The staircase to the upper floor,The stone floor*,The Chimney]", 
@@ -376,44 +376,13 @@ const steps = [
         quiz: "0",
         image: "wap/TheProspectOfWhitby202208-2.jpg",
         video: "",
-        lat: "51.50623", 
-        lon: "-0.07209",
+        lat: "51.551.50713738", 
+        lon: " -0.051164179004",
         questions: { 
         }  
     },
 
   ];
   
-
-// 
-// <wpt lat="51.5050571" lon="-0.069038">
-// <wpt lat="51.5047401" lon="-0.0691934">
-// <wpt lat="51.5045574" lon="-0.0683991">
-// <wpt lat="51.5051324" lon="-0.0682524">
-// <wpt lat="51.5046238" lon="-0.0672287">
-// <wpt lat="51.5045324" lon="-0.0677035">
-// <wpt lat="51.5037317" lon="-0.0650531">
-// <wpt lat="51.5033233" lon="-0.0634387">
-// <wpt lat="51.5037317" lon="-0.0633265">
-// <wpt lat="51.5035383" lon="-0.0621178">
-// <wpt lat="51.5031406" lon="-0.0622214">
-// <wpt lat="51.5039305" lon="-0.061902">
-// <wpt lat="51.5038871" lon="-0.0614202">
-// <wpt lat="51.5041428" lon="-0.0614201">
-// <wpt lat="51.5041294" lon="-0.0606423">
-// <wpt lat="51.5052514" lon="-0.0606262">
-// <wpt lat="51.5053199" lon="-0.0592467">
-// <wpt lat="51.5055403" lon="-0.0582033">
-// <wpt lat="51.5046647" lon="-0.0573062">
-// <wpt lat="51.5041862" lon="-0.0563912">
-// <wpt lat="51.5043999" lon="-0.0562222">
-// <wpt lat="51.5041545" lon="-0.0558172">
-// <wpt lat="51.5054156" lon="-0.0538533">
-// <wpt lat="51.5056809" lon="-0.0543021">
-// <wpt lat="51.5060872" lon="-0.0543882">
-// <wpt lat="51.5062621" lon="-0.0535722">
-// <wpt lat="51.5070158" lon="-0.0520442">
-// <wpt lat="51.5071964" lon="-0.0512781">
-
 
 

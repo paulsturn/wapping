@@ -1,6 +1,11 @@
 
 import { saveTeam, saveAnswer, saveResult } from "./data.js";
 
+
+let map = null;
+
+initMap();
+
 // Initialize an index to keep track of the current item
 let currentIndex = 0;
 
@@ -10,9 +15,8 @@ const teamName = getTeamNameLocal();
 // Display first step
 displayCurrentItem();
 
-// Quiz code tests
+// Quiz code 
 //------------------------------------------------------------------------------------
-
 
 function attachAnswerListners(){
 
@@ -57,13 +61,7 @@ function attachAnswerListners(){
 
   function displayCurrentItem() {
 
-    // do pre-display tasks
-    // removeClassFromElements('answer', 'answer-enable'); 
-
-    // Stop any playing audio
-    // audioReset();
-
-
+    
     // If no steps then exit
     if (typeof steps === "undefined") { 
       console.log("exiting DisplayCurrentItem as no steps"); 
@@ -78,7 +76,6 @@ function attachAnswerListners(){
         const w_titleDiv = document.getElementById('w_title');
         const w_contentDiv = document.getElementById('w_content');
 
-
         const w_image = document.getElementById('w_image');
         const w_directions = document.getElementById('w_directions');
         const w_quiz = document.getElementById('w_quiz');
@@ -86,6 +83,8 @@ function attachAnswerListners(){
         const w_warningDiv = document.getElementById('w_warning');
         const w_mediaDiv1 = document.getElementById('w_media_1');
 
+
+      
         const b_checkAnswers = document.getElementById('btnCheckAnswers');
 
         w_titleDiv.innerHTML = `${currentItem.name}`;
@@ -98,7 +97,6 @@ function attachAnswerListners(){
           w_image.innerHTML = `<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="${currentItem.video}" frameborder="0" allow="autoplay" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="BTM wapping RAW"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>`;
        
         }
-
 
         if (currentItem.info != '') {
           w_infoDiv.innerHTML = `${currentItem.info}`;          
@@ -121,6 +119,37 @@ function attachAnswerListners(){
         else {
           w_directions.innerHTML = '';
         }
+
+        // Update map
+        const lat = currentItem.lat;
+        const lon = currentItem.lon;
+        
+        console.log("GEO: " + lat + " " + lon );
+
+        // console.log(map);
+
+        var marker = new mapboxgl.Marker()
+        .setLngLat([lon,lat]) 
+        .addTo(map);
+
+        // map.setCenter([lon,lat]);
+
+        map.flyTo({
+          center: [lon, lat],essential: true });
+
+        // map.fitBounds([
+        //   [52.03238901390978, 0.913188059745586],
+        //   [52.38901390978, 0.13188059745586]
+        // ]);
+
+        map.easeTo({
+          zoom:16,
+          center: [lon, lat],
+          bearing: -10,
+          duration: 1000,
+          easing: x => x
+        });
+
 
         // Quiz section
         let subChildHtml = "";
@@ -503,6 +532,35 @@ function checkAnswers() {
 function isAnswerChosen(str){
   return str.toLowerCase().includes('answer-selected');
 }
+
+
+ function initMap(){
+
+  mapboxgl.accessToken = 'pk.eyJ1IjoicGF1bHN0dXJuIiwiYSI6ImNsb29xNjhsYTAzMWMyaWs0MnhmcnkwemMifQ.QGAyREqnB3rSzZTZoevDQw';
+
+  map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/paulsturn/clor4p1kl00ni01pbg0en5pa4',
+    center: [-0.0704913,51.5065202],
+    zoom: 16,
+    bearing: 10
+  });
+
+  map.easeTo({
+    zoom:16,
+    bearing: -10,
+    duration: 7000,
+    easing: x => x
+  });
+
+ }
+
+
+
+
+
+
+
 
 //
 // Event listners

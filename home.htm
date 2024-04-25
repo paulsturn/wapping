@@ -136,27 +136,14 @@
  
   <script>
     
-    mapboxgl.accessToken = 'pk.eyJ1IjoicGF1bHN0dXJuIiwiYSI6ImNsb29xNjhsYTAzMWMyaWs0MnhmcnkwemMifQ.QGAyREqnB3rSzZTZoevDQw';
-
-    const map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/paulsturn/clor4p1kl00ni01pbg0en5pa4',
-      center: [-0.0704913,51.5065202],
-      zoom: 8,
-      bearing: 10
-    });
-
-
-    map.easeTo({
-      zoom:16,
-      bearing: -10,
-      duration: 7000,
-      easing: x => x
-    });
-
     // show team name in header
     const teamNameEle = document.getElementById("currentTeamName");
     teamNameEle.textContent = localStorage.getItem("team_name"); // getTeamNameLocal();
+
+
+
+
+
 
   </script>
 
