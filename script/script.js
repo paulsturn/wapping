@@ -93,7 +93,10 @@ function attachAnswerListners(){
         w_image.innerHTML = `<img src='assets/img/${currentItem.image}'>`;
 
         if (currentItem.video){
-          w_image.innerHTML = `<video width='100%' controls loop autoplay><source src='assets/vid/${currentItem.video}' type='video/mp4'></video>`;
+          // w_image.innerHTML = `<video width='100%' controls loop autoplay><source src='assets/vid/${currentItem.video}' type='video/mp4'></video>`;
+       
+          w_image.innerHTML = `<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/938299336?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="BTM wapping RAW"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>`;
+       
         }
 
 

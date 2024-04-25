@@ -311,6 +311,17 @@ p, li{
 }
 
 
+#continuePrompt{
+  color:#fff;
+  font-size:15px;
+  padding:4px 8px;
+  text-align:center;
+  background-color:#03224b;
+  animation: pulse 2s infinite;
+  animation: pulse 3s infinite;
+  margin-top: 50px;
+}
+
 .options{
   display: grid; 
   grid-template-columns: 1fr 1fr; 
@@ -499,6 +510,17 @@ dialog::backdrop {
   }
 }
 
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
 
 .time-bar {
   padding: 12px 0 12px 0;
