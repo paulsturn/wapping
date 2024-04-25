@@ -397,6 +397,20 @@ function createX(teamName){
 }
 
 
+function removeAnswerHandler(){
+
+  const answers = document.querySelectorAll('.answer');
+
+  answers.forEach(box => {
+    // box.removeEventListener("mousemove", myFunction);
+
+    let newBox = box.cloneNode(true);
+    box.parentNode.replaceChild(newBox,box);
+    box = newBox;
+  });
+}
+
+
 
 function checkAnswers() {
 
@@ -470,6 +484,9 @@ function checkAnswers() {
 
   saveResult(compResult);
 
+  // Stop re-submitting of answers and restyle section
+  removeAnswerHandler();
+  addClassToElements("quiz","quizLocked");
 
 };
 
