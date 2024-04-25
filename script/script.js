@@ -16,6 +16,9 @@ displayCurrentItem();
 
 function attachAnswerListners(){
 
+  // remove locked status
+  removeClassFromElements("quiz","quizLocked");
+
   const answers = document.querySelectorAll('.answer');
 
   let qidForRadio = "";
@@ -506,18 +509,10 @@ const mapSwitch = document.getElementById("mapToggle");
 const cameraSwitch = document.getElementById("cameraToggle");
 const directionsSwitch = document.getElementById("directionsToggle");
 
-// const dialogBox = document.getElementById("dialogBox");
-// const dialogMessage= document.getElementById("dialogMessage");
-
-
 // set per answer block..
 const btnCheckAnswers = document.getElementById("btnCheckAnswers");
 
-
-
-
 // Only attach if addTeam is present
-
 addTeam.addEventListener("click", () => {
   const teamName = document.getElementById("teamName");
 
