@@ -320,7 +320,7 @@ const steps = [
         audio_talk: "",
         quiz: "138",
         image: "wap/no-image.jpg",
-        video: "wap/BTM wapping RAW .mp4",
+        video: "https://player.vimeo.com/video/938299336",
         lat: "51.50692624", 
         lon: "-0.0511035708",
         questions: {
@@ -339,8 +339,8 @@ const steps = [
         quiz: "0",
         image: "wap/no-image.jpg",
         video: "",
-        lat: "51.551.50713738", 
-        lon: " -0.051164179004",
+        lat: "51.5071476076", 
+        lon: "-0.051164179004",
         questions: {      
         }  
     },
@@ -354,8 +354,8 @@ const steps = [
         quiz: "139",
         image: "wap/Wapping6.jpg",
         video: "",
-        lat: "51.551.50713738", 
-        lon: " -0.051164179004",
+        lat: "51.5071476076", 
+        lon: "-0.051164179004",
         questions: {
             q1: "171-What has not been a former name of the Prospect of Whitby?[Devil's Taven,The Pelican,The Zebra,The King's Head*]",       
             q2: "172-What is the oldest part of the pub still intact?[The pewter-topped bar,The staircase to the upper floor,The stone floor*,The Chimney]", 
@@ -376,8 +376,8 @@ const steps = [
         quiz: "0",
         image: "wap/TheProspectOfWhitby202208-2.jpg",
         video: "",
-        lat: "51.551.50713738", 
-        lon: " -0.051164179004",
+        lat: "51.5071476076", 
+        lon: "-0.051164179004",
         questions: { 
         }  
     },
