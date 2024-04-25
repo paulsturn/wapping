@@ -293,7 +293,7 @@ p, li{
 }
 
 #quizWrapper{
-  transition: background-color 2s ease-in;
+  transition: background-color 1s ease-in;
 }
 #quizWrapper .quiz{
   background-color:#d0f1ff

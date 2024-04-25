@@ -476,7 +476,6 @@ function checkAnswers() {
 
   dialogMessageEle.innerHTML += "<ul class='check'>" + answerText + "</ul>";
 
-
   // Save compressed results to DB
   let answerTextComp = answerText;
   answerTextComp = answerTextComp.replaceAll("Not answered", "NA");
@@ -490,6 +489,10 @@ function checkAnswers() {
   // Stop re-submitting of answers and restyle section
   removeAnswerHandler();
   addClassToElements("quiz","quizLocked");
+
+  // remove check answer button
+  btnCheckAnswers.style.display = 'none';
+
 
 };
 
