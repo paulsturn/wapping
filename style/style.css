@@ -365,6 +365,11 @@ p, li{
   color:#000;
 }
 
+.true-answer{
+  border:solid 2px #fff!important;
+  transform: scale(1.05);
+}
+
 ul.check{
   padding:0;
   text-align: left;

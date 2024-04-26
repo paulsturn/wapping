@@ -479,6 +479,11 @@ function checkAnswers() {
         correctCount++;
       }
 
+      if (correct) {
+        choice.classList.add("true-answer");
+      }
+
+
       questionId = id;
 
     }
@@ -518,12 +523,18 @@ function checkAnswers() {
   removeAnswerHandler();
   addClassToElements("quiz","quizLocked");
 
+  showAnswers();
+
   // remove check answer button
   btnCheckAnswers.style.display = 'none';
 
   // Return number of correct answers
   return correctCount;
 };
+
+function showAnswers(){
+
+}
 
 
 function isAnswerChosen(str){
