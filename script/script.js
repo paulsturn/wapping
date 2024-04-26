@@ -128,8 +128,6 @@ function attachAnswerListners(){
         const lat = currentItem.lat;
         const lon = currentItem.lon;
         
-        console.log("GEO: " + lat + " " + lon );
-
         var marker = new mapboxgl.Marker()
         .setLngLat([lon,lat]) 
         .addTo(map);
