@@ -1,5 +1,5 @@
 
-import { saveTeam, saveAnswer, saveResult } from "./data.js";
+import { saveTeam, saveResult } from "./data.js";
 
 
 let map = null;
@@ -126,8 +126,6 @@ function attachAnswerListners(){
         
         console.log("GEO: " + lat + " " + lon );
 
-        // console.log(map);
-
         var marker = new mapboxgl.Marker()
         .setLngLat([lon,lat]) 
         .addTo(map);
@@ -137,11 +135,6 @@ function attachAnswerListners(){
         map.flyTo({
           center: [lon, lat],essential: true });
 
-        // map.fitBounds([
-        //   [52.03238901390978, 0.913188059745586],
-        //   [52.38901390978, 0.13188059745586]
-        // ]);
-
         map.easeTo({
           zoom:16,
           center: [lon, lat],
@@ -149,6 +142,8 @@ function attachAnswerListners(){
           duration: 1000,
           easing: x => x
         });
+
+
 
 
         // Quiz section
@@ -405,24 +400,21 @@ function removeTextInBrackets(inputString) {
 
 
 function setTeamNameLocal(teamName){
-  console.log('setTeamnamelocal');
   setLocalData("team_name",teamName);
-  // localStorage.setItem("team_name", teamName);
 };
 
 function getTeamNameLocal(){
   return getLocalData("team_name");
-  // return localStorage.getItem("team_name");
 };
 
 
 function setLocalData(key, data){
-  console.log('setLocaldata' + ' ' + key + ' ' + data);
+  console.log('setLocaldata:' + ' ' + key + ' ' + data);
   localStorage.setItem(key, data);
 }
 
 function getLocalData(key){
-  return localStorage.getItem("team_name");
+  return localStorage.getItem(key);
 }
 
 
@@ -450,7 +442,9 @@ function removeAnswerHandler(){
 function checkAnswers() {
 
   let answerText = "";
-  let questionNum = 1;
+  let questionNum = 1; // This step qID
+  let questionId = ""; // Global qID
+  let correctCount = 0;
 
   const myDialogEle = document.getElementById("myDialog");
   myDialogEle.showModal();
@@ -464,7 +458,6 @@ function checkAnswers() {
   questions.forEach(question => {
     const answers = question.children;
 
-    let questionId = ""; // Not yet used
     let notAttempted = true;
     let correctAnswer = false;
 
@@ -481,6 +474,7 @@ function checkAnswers() {
 
       if (selected & correct){
         correctAnswer = true;
+        correctCount++;
       }
 
       questionId = id;
@@ -488,7 +482,7 @@ function checkAnswers() {
     }
 
     answerText += "<li>";
-    answerText += "Q" + questionNum + ". ";
+    answerText += questionId + "|" +"Q" + questionNum + ". ";
 
     // Is there an attempt?
     if (notAttempted){
@@ -525,7 +519,8 @@ function checkAnswers() {
   // remove check answer button
   btnCheckAnswers.style.display = 'none';
 
-
+  // Return number of correct answers
+  return correctCount;
 };
 
 
@@ -556,7 +551,13 @@ function isAnswerChosen(str){
  }
 
 
-
+function updateScore(){
+  // update score in header
+  const scoreEle = document.getElementById("teamScore");
+  scoreEle.textContent = getLocalData("totalScore"); 
+  removeClassFromElements("score","flashScore");
+  addClassToElements("score","flashScore");
+}
 
 
 
@@ -615,5 +616,18 @@ directionsSwitch.addEventListener("click", () => {
 });
 
 btnCheckAnswers.addEventListener("click", () => {
-  checkAnswers();
+  let correct = checkAnswers();
+
+  let score = getLocalData("totalScore");
+
+  if (score == 'NaN') {
+    score = 0;
+    setLocalData("totalScore", score);
+  }
+
+  let newScore = parseInt(score) + parseInt(correct);
+  setLocalData("totalScore", newScore);
+
+  updateScore();
+
 });

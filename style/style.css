@@ -406,7 +406,7 @@ dialog {
 	left: 50%;
 	right: auto;
   width:66%;
-  height: 30vh;
+  height: 39vh;
   min-height: 30vh;
 	padding: var(--padding-300);
 	transform: perspective(500px) translate(-50%, -50%);
@@ -460,6 +460,16 @@ dialog::backdrop {
 
 /* animations */
  
+.score{
+  font-weight:600;
+  color:#fff;
+}
+.flashScore{
+  animation: pulseScore .5s ease-in-out forwards;
+  animation-iteration-count: 2;
+  font-size:20px;
+}
+
 .ken-burns {
   overflow: hidden;
   width: 100%;
@@ -519,6 +529,21 @@ dialog::backdrop {
   }
   100% {
       transform: scale(1);
+  }
+}
+
+@keyframes pulseScore {
+  0% {
+      transform: scale(1);
+      color:#fff;
+  }
+  50% {
+    transform: scale(2) rotate(2deg);
+    color:var(--btm-quiz-chosen);
+  }
+  100% {
+      transform: scale(1);
+      color:#fff;
   }
 }
 

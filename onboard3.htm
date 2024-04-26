@@ -106,6 +106,9 @@
       const existingTeamEle = document.getElementById("existingTeam");
 
       const teamName = localStorage.getItem("team_name");
+
+      
+      setLocalData("totalScore", 0);
       
       // Has teamname already been set?
       if (teamName) {

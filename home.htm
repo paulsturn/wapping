@@ -36,7 +36,7 @@
   <div class="wrapper">
 
     <div class="header">
-      BTML <div id="currentTeamName"></div>
+      BTML <div id="currentTeamName"></div><div id="teamScore" class="score">-</div>
     </div>
 
     <div class="inner">
@@ -65,9 +65,6 @@
 
         <div id="w_quiz">quiz</div>
                       
-          <!-- <h3 id="score" style="text-align: right;">Current score 3 from 3</h3> -->
-          <!-- <h5 style="text-align: right;margin-top:-20px;color:#416601;letter-spacing:1px;">Maximum score so far!</h5> -->
-
       </div>
 
       <div class="inner-spaced">
@@ -138,7 +135,7 @@
     
     // show team name in header
     const teamNameEle = document.getElementById("currentTeamName");
-    teamNameEle.textContent = localStorage.getItem("team_name"); // getTeamNameLocal();
+    teamNameEle.textContent = localStorage.getItem("team_name"); 
 
 
 
