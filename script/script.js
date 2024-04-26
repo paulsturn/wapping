@@ -523,18 +523,12 @@ function checkAnswers() {
   removeAnswerHandler();
   addClassToElements("quiz","quizLocked");
 
-  showAnswers();
-
   // remove check answer button
   btnCheckAnswers.style.display = 'none';
 
   // Return number of correct answers
   return correctCount;
 };
-
-function showAnswers(){
-
-}
 
 
 function isAnswerChosen(str){
