@@ -73,20 +73,21 @@ p, li{
   flex-direction: column;
   height:100vh;
   height:100dvh;
-
+  margin-top: 32px;
 }
 
 .header{
   top: 0;
-  display:flex;
+  display: flex;
   justify-content: space-between;
   padding: var(--padding-100) var(--padding-300);
   position: sticky;
-  
-  z-index:100;
-  color:#fff;
-  background-color:var(--btm-blue-100);
-  border-bottom:solid 1px rgba(55, 55, 55, .1)
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+  color: #fff;
+  background-color: var(--btm-blue-100);
+  border-bottom: solid 1px hsla(0, 0%, 100%, .5);
 }
 
 .title-section{
