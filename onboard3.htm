@@ -51,13 +51,14 @@
                 Give your team a name...
               </p>
               <input type="text" id="teamName" name="teamName" placeholder="e.g. Tequila Mockingbirds">
+              <br /><br />
               <div id="addTeamName" class="button button-100">Save Team Name</div>
             </div>
             <!-- or -->
             <p id="existingTeam" class="onboard-text"></p>
           </div>      
 
-          <div class="spacer"></div>
+
           <div style="padding:0 80px;">
             <div id="btn-start" class="button button-200">
                 Next...
@@ -68,7 +69,7 @@
         
         <div class="spacer"></div>
 
-        <a href="teamphoto.htm?cb=team" class="">( test )</a>
+        <!-- <a href="teamphoto.htm?cb=team" class="">( test )</a> -->
     
       </div>
 
@@ -92,6 +93,7 @@
     <script>
 
       let cb = Math.floor(Math.random() * 2000);
+
       const start = document.getElementById("btn-start");
       start.addEventListener("click", () => {
 
@@ -107,8 +109,7 @@
 
       const teamName = localStorage.getItem("team_name");
 
-      
-      setLocalData("totalScore", 0);
+      // setTeamNameLocal(teamName);      
       
       // Has teamname already been set?
       if (teamName) {

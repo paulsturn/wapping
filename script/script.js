@@ -4,7 +4,11 @@ import { saveTeam, saveResult } from "./data.js";
 
 let map = null;
 
-initMap();
+
+// If map div is preent on page then init the map
+if (elementExistByID("map")) {
+  initMap();
+} 
 
 // Initialize an index to keep track of the current item
 let currentIndex = 0;
@@ -528,6 +532,15 @@ function isAnswerChosen(str){
   return str.toLowerCase().includes('answer-selected');
 }
 
+function elementExistByID(id){
+  let element = !!document.getElementById(id); 
+  if (element) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 
  function initMap(){
 
@@ -579,6 +592,7 @@ const btnCheckAnswers = document.getElementById("btnCheckAnswers");
 
 // Only attach if addTeam is present
 addTeam.addEventListener("click", () => {
+
   const teamName = document.getElementById("teamName");
 
   if (teamName.value){
