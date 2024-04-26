@@ -680,8 +680,9 @@ dialog::backdrop {
 }
 
 .audio-cntr audio{
-  height:34px;  
-  width: calc(100vw - 90px);
+  height: 34px;
+  padding-top: 6px;
+  width: calc(100vw - 110px);
 }
 
 .dr-green{
