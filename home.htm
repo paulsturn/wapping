@@ -91,6 +91,7 @@
             </div>  -->  
             <div id="mapToggle" class="control">
                 <span class="material-icons">location_on</span>
+                <div id="SpeechBubble">Click here to open and close the map.</div>
             </div> 
 
 
@@ -137,10 +138,13 @@
     const teamNameEle = document.getElementById("currentTeamName");
     teamNameEle.textContent = localStorage.getItem("team_name"); 
 
+    // speech bubble
+    const bubble = document.getElementById("SpeechBubble");
+    bubble.classList.add("bubbleIn");
 
-
-
-
+    bubble.addEventListener("click", () => {
+      bubble.classList.remove("bubbleIn");
+    });
 
   </script>
 
