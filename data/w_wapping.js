@@ -271,7 +271,7 @@ const steps = [
         lat: "51.50536098", 
         lon: "-0.059436072",
         questions: {
-            q1: "155-Who owned the pub and named it the “Old Star”??[Josehp Turner*,Joseph Swan,Tina Turner,Sophie Turner]", 
+            q1: "155-Who owned the pub and named it the “Old Star”??[Joseph Turner*,Joseph Swan,Tina Turner,Sophie Turner]", 
             q2: "156-Who was the 1st landlady in the 1830s?[Sophie Booth*,Sophie Turner,Connie Booth,Sophie Kidd]",  
             q3: "157-Why was the person described as “Puggy”?[They were less than 5 feet tall*,They liked bare knuckle fighting,They had lots of small dogs,They made marbles by hand]",  
             q4: "158-What did this person do at the weekends?[They participated in drunken debauchery in the dockside taverns*,They rowed on the Thames,They trained as a solicitor,They were one of the choristers at St Paul’s cathedral]",  
