@@ -124,8 +124,8 @@ const steps = [
         quiz: "123",
         image: "wap/TowerBridgeWharf202208-2.jpg",
         video: "",
-        lat: "51.5037317", 
-        lon: "-0.0650531",
+        lat: "51.50502424", 
+        lon: "-0.0690678322",
         questions: {
             q1: "115-Name the River?[Tyburn,Effra,Neckinger*,Tide]",        
             q2: "116-On the opposite side of the river is the Shard, which is the tallest building in Britain. How many storeys does it have?[79,88,95*,99]",        
@@ -213,8 +213,8 @@ const steps = [
         quiz: "131",
         image: "wap/TownOfRamsgateGates202208.jpg",
         video: "",
-        lat: "51.5", 
-        lon: "-0.07",
+        lat: "51.504141792", 
+        lon: "-0.06188309",
         questions: {
             q1: "140-Who was buried in this churchyard on 1648?[Thomas Cromwell,Thomas à Becket,Thomas Gainsborough,Thomas Rainsborough*]",
             q2: "141-What rank did this person hold in the New Model Army?[General,Colonel*,Admmiarl,Cavalier]",  
@@ -231,8 +231,8 @@ const steps = [
         quiz: "132",
         image: "wap/Figures202208.jpg",
         video: "",
-        lat: "51.5", 
-        lon: "-0.07",
+        lat: "51.503987447", 
+        lon: "-0.061416658",
         questions: {
             q1: "145-What are the figure on the building?[A girl and a boy*,A nun and a priest,A teacher and a sailor,A shepherdess and shepherd]", 
             q2: "146-When was the building founded?[1666,1695*,1760,1766]",
@@ -288,8 +288,8 @@ const steps = [
         quiz: "135",
         image: "wap/no-image.jpg",
         video: "",
-        lat: "51.5", 
-        lon: "-0.07",
+        lat: "51.50463599", 
+        lon: "-0.0572941467",
         questions: {
             q1: "160-What is the space named in the name of the road, which reflects a warehouse which housed a spice in by-gone times?[Turmeric,Nutmeg,Allspice,Cinnamon*]",    
             q2: "161-This street was also the site of the Pear Tree Inn in the past. What happened there in December 1811 that brought notoriety to the area?[It was the site of a horrific fire in a high-rise dwelling,There were a number of gruesome murders*,The ale sold was found to be diluted with water frm the Thames,Cholera broke out at a communal pump]", 
@@ -306,8 +306,8 @@ const steps = [
         quiz: "0",
         image: "wap/no-image.jpg",
         video: "",
-        lat: "51.5", 
-        lon: "-0.07",
+        lat: "51.50472604", 
+        lon: "-0.0556506378",
         questions: {      
         }  
     },
