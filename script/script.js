@@ -427,7 +427,7 @@ function getTeamNameLocal(){
 
 
 function setLocalData(key, data){
-  console.log('setLocaldata:' + ' ' + key + ' ' + data);
+  // console.log('setLocaldata:' + ' ' + key + ' ' + data);
   localStorage.setItem(key, data);
 }
 
@@ -438,7 +438,7 @@ function getLocalData(key){
 
 function createX(teamName){
   setTeamNameLocal(teamName);
-  saveTeam(teamName);
+  saveTeam(getDateStamp() + "|" + teamName);
 }
 
 
