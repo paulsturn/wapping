@@ -2,7 +2,7 @@
 const steps = [
     { 
         name: "Before you start your Tour", 
-        place: "<p>Before you start our tour... Advice and notes -  not too long !. Perhaps a Matthew intro below, again less than 20 seconds!</p>",
+        place: "<p>The Historical Walks can be done anytime but if you are doing a Tavern Tour please remember most London taverns and pubs do not open until around noon and close at 11pm.</p>",
         info: "<p>Additional information about the location will appear in a box like this.</p>",
         access: "<p>Messages about Restricted access or Safety considerations will show in box like this.</p>",
         audio_direction: "",
