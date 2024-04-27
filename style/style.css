@@ -1108,6 +1108,7 @@ dialog::backdrop {
   top: -74px;
   transform: scale(0);
   animation-fill-mode: forwards;
+  box-shadow: #000 0px 3px 24px;
 }
 
 #SpeechBubble::before {
