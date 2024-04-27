@@ -264,6 +264,15 @@ function getLocation() {
 function showPosition(position) {
   coordinates.innerHTML = "Latitude: " + position.coords.latitude +
   "<br>Longitude: " + position.coords.longitude;
+
+  // Put marker on map
+
+  const lat = position.coords.latitude;
+  const lon = position.coords.longitude;
+  
+  var marker = new mapboxgl.Marker()
+  .setLngLat([lon,lat]) 
+  .addTo(map);
 }
 
 
