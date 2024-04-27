@@ -61,11 +61,27 @@ function attachAnswerListners(){
   });
 }
 
+function addZero(i) {
+  if (i < 10) {i = "0" + i}
+  return i;
+}
+
+function getDateStamp(){
+  const d = new Date();
+  let year = d.getFullYear();   
+  let month = addZero(d.getMonth() + 1);
+  let day = addZero(d.getDate());
+  let hour = addZero(d.getHours());
+  let min = addZero(d.getMinutes());
+  let sec = addZero(d.getSeconds());
+  let timeStamp = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
+  return timeStamp;
+}
+
 //------------------------------------------------------------------------------------
 
   function displayCurrentItem() {
-
-    
+  
     // If no steps then exit
     if (typeof steps === "undefined") { 
       console.log("exiting DisplayCurrentItem as no steps"); 
@@ -483,13 +499,12 @@ function checkAnswers() {
         choice.classList.add("true-answer");
       }
 
-
       questionId = id;
 
     }
 
     answerText += "<li>";
-    answerText += questionId + "|" +"Q" + questionNum + ". ";
+    answerText += "(" + questionId + ") " +"Q" + questionNum + ". ";
 
     // Is there an attempt?
     if (notAttempted){
@@ -515,9 +530,9 @@ function checkAnswers() {
   answerTextComp = answerTextComp.replaceAll("</li>", ",");
   answerTextComp = answerTextComp.replace(/(<([^>]+)>)/ig, '');
 
-  let compResult = teamName + "|" + answerTextComp;
-
+  let compResult = getDateStamp() + "|"  + teamName + "|" + answerTextComp;
   saveResult(compResult);
+
 
   // Stop re-submitting of answers and restyle section
   removeAnswerHandler();
