@@ -154,7 +154,7 @@ function getDateStamp(){
         //   center: [lon, lat],essential: true });
 
         map.easeTo({
-          zoom:16,
+          zoom:17,
           center: [lon, lat],
           bearing: -10,
           duration: 1000,
