@@ -251,6 +251,24 @@ function getDateStamp(){
 // Functions
 //
 
+const coordinates = document.getElementById("coord");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    coordinates.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  coordinates.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+
+
+
 function isTheAnswer(str) {
   return str.endsWith('*');
 }
@@ -278,6 +296,10 @@ function removeClassFromElements(className, newClass) {
 function mapToggle() {
   var mapDiv = document.getElementById("map"); 
   mapDiv.classList.toggle("mapOpen"); 
+  
+  // Show current location 
+  getLocation();
+
 }
 
 function cameraToggle() {
