@@ -37,7 +37,7 @@
   <div class="header">
     BTML <div id="currentTeamName"></div><div id="teamScore" class="score">-</div>
   </div>
-  
+
 
   <div class="wrapper">
 
@@ -149,6 +149,25 @@
     bubble.addEventListener("click", () => {
       bubble.classList.remove("bubbleIn");
     });
+
+    // Toggle info boxes to show full height
+    const toggleInfo = document.getElementById('w_info');
+
+    toggleInfo.addEventListener('click', function() {
+
+      this.classList.toggle("io-info-toggle");
+
+      // if (this.style.height === '200px') {
+      //   this.style.height = '100%'; 
+      //   console.log("100%");
+      // } else {
+      //   this.style.height = '200px';
+      //   console.log("200px");
+      // }
+    });
+
+
+
 
   </script>
 
