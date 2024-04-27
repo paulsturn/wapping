@@ -150,8 +150,8 @@ function getDateStamp(){
 
         // map.setCenter([lon,lat]);
 
-        map.flyTo({
-          center: [lon, lat],essential: true });
+        // map.flyTo({
+        //   center: [lon, lat],essential: true });
 
         map.easeTo({
           zoom:16,
@@ -257,22 +257,34 @@ function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else {
-    coordinates.innerHTML = "Geolocation is not supported by this browser.";
+    coordinates.innerHTML = "Geolocation is not supported or not allowed on this device.";
   }
 }
 
 function showPosition(position) {
-  coordinates.innerHTML = "Latitude: " + position.coords.latitude +
-  "<br>Longitude: " + position.coords.longitude;
+  // coordinates.innerHTML = "Lat: " + position.coords.latitude + "<br>Lon: " + position.coords.longitude;
 
   // Put marker on map
-
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
-  
-  var marker = new mapboxgl.Marker()
-  .setLngLat([lon,lat]) 
-  .addTo(map);
+
+
+  const el = document.createElement('div');
+  el.className = 'markerYou';
+
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el)
+    .setLngLat([lon,lat])
+    .addTo(map);
+
+  map.easeTo({
+    zoom:17,
+    center: [lon, lat],
+    // bearing: -10,
+    // duration: 1000,
+    easing: x => x
+  });
+
 }
 
 
@@ -306,9 +318,6 @@ function mapToggle() {
   var mapDiv = document.getElementById("map"); 
   mapDiv.classList.toggle("mapOpen"); 
   
-  // Show current location 
-  getLocation();
-
 }
 
 function cameraToggle() {
@@ -635,6 +644,7 @@ const nextButton = document.getElementById("nextButton");
 const mapSwitch = document.getElementById("mapToggle");
 const cameraSwitch = document.getElementById("cameraToggle");
 const directionsSwitch = document.getElementById("directionsToggle");
+const myLocationSwitch = document.getElementById("myLocation");
 
 // set per answer block..
 const btnCheckAnswers = document.getElementById("btnCheckAnswers");
@@ -656,7 +666,9 @@ addTeam.addEventListener("click", () => {
   
 });
 
-
+myLocationSwitch.addEventListener("click", () => {
+  getLocation();
+});
 
 previousButton.addEventListener("click", () => {
   stepBackward();

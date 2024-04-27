@@ -177,15 +177,21 @@ p, li{
 }
 
 
-#controls{
+#controls,
+#map-controls{
   position: fixed;
   top: 98px;
   right: 10px;
   margin:0;
   z-index:90;
 }
+#map-controls{
+  top: 158px;
+  z-index:90;
+}
 
-#controls li{
+#controls li,
+#map-controls li{
   height:36px;
   width:36px;
   background-color: #254088;
@@ -246,9 +252,21 @@ p, li{
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  cursor: pointer;
+  cursor: pointer;  
+  background-color:#0f0;
 }
 
+.markerYou {
+  background-image: url('../img/directions_walk.svg');
+  background-size: cover;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  border:solid 2px #fff;
+  background-color:#ffffff88;
+  padding:4px;
+}
 
 .io-box{
   padding:var(--padding-100);
