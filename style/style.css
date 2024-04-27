@@ -398,7 +398,7 @@ p, li{
 }
 
 .quizLocked .answer:not(.true-answer) {
-  opacity:0.4!important;
+  opacity:0.3!important;
 }
 
 
