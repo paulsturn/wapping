@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- <link rel="stylesheet" href="style/reset.min.css">
+  <link rel="stylesheet" href="style/style.min.css"> -->
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+
+  <title>BeyondTheMapLondon</title>
+
+  <style>
+
+body{
+  background-color:#f2f2f2;
+  margin:0;
+  padding:0;
+}
+
+
+    .slider-container {
+      display:flex;
+      flex-direction: column;
+      max-width: 600px;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      position: relative;
+      height:94dvh;
+    }
+    .my-slider {
+      position: relative;
+    }
+    .slider-item {
+      padding: 0;
+      position: relative;
+      height:85dvh;
+    }
+    .controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      width: 100%;
+      display:none;
+    }
+    .controls:focus {
+      outline: none;
+    }
+    .controls li:hover {
+      cursor: pointer;
+    }
+    .card {
+      display:flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 100%;
+      color: #212121;
+      padding:0;
+      font-family: sans-serif;
+      overflow: hidden;
+      position: relative;
+      height:100%;
+    }
+    .tns-nav{
+      text-align: center;
+      margin:18px 0;
+    }
+    .tns-nav button{
+      height:16px;
+      width:16px;
+      border-radius:20px;
+      margin-right:14px;
+      border:solid 1px #9292e2;
+      background-color:#fff;
+    }
+    button.tns-nav-active{
+      background-color:#9292e2;
+    }
+
+
+
+    .card2{
+      background-image: url("assets/img/wap/StKatherinesDocks202208.jpg");
+      background-size:cover;
+    }
+  </style>
+
+
+  </head>
+  <body>
+
+    <div class="slider-container">   
+    
+      <div class="my-slider">
+          <div class="slider-item">
+              <div class="card card1">    
+                  <div style="height:50%">
+                    <img src="img/london-bridge-background-01.jpg" style="width:100%;" />  
+                  </div>          
+                  <h2>Page 1</h2>
+                  <p class="card_description">Loresm voluptas ipsum dolor sit</p>
+              </div>
+          </div>
+          
+          <div class="slider-item">
+              <div class="card card2">                         
+                  <h2>Page 2</h2>
+                  <p>Lorem ipsum dolor sit amet  t  voluptasvoluptas!</p>
+              </div>
+          </div>
+          
+          <div class="slider-item">
+              <div class="card card3">                
+                  <h2>Page 3</h2>
+                  <p>Lorem sit amet   elit. Dignissimos, voluptas!</p>
+              </div>
+          </div>
+          
+          <div class="slider-item">
+              <div class="card card4">                
+                  <h2>Page 4</h2>
+                  <p>Lorem ipsum dolor amet conectetur voluptas!</p>
+              </div>
+          </div>
+      </div>    
+      
+      
+      <ul class="controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+          <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
+              back
+          </li>
+          <li class="next" data-controls="next" aria-controls="customize" tabindex="-1">
+              Next Page    
+          </li>
+      </ul>
+      
+  </div>
+  
+    
+<script>
+  const slider = tns({
+    center: true,
+    container: '.my-slider',
+    prevButton: '.prev',
+    nextButton: '.next',
+    navPosition: 'bottom',
+    loop: false,
+    items: 1,
+    slideBy: 1,
+    mouseDrag: true,
+    nav: true,
+    navAsThumbnails: false
+  });
+</script>
+
+
+  </body>
+</html>
