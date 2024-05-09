@@ -88,6 +88,26 @@ function getDateStamp(){
       return;
     }
 
+console.log("Current step=" + currentIndex);
+
+      const previousButton = document.getElementById('previousButton');   
+      if( currentIndex == 0 ){
+        previousButton.style.opacity = "0.1";
+      } else {
+        previousButton.style.opacity = "1";
+      }
+
+
+      const nextButton = document.getElementById('nextButton');   
+      if( currentIndex >= 21 ){
+        nextButton.style.opacity = "0.1";
+      } else {
+        nextButton.style.opacity = "1";
+      }
+
+
+
+
     if (currentIndex >= 0 && currentIndex < steps.length) {
         const currentItem = steps[currentIndex];
         const resultDiv = document.getElementById('w_result');
