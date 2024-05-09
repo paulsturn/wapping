@@ -1046,8 +1046,11 @@ dialog::backdrop {
   background-color: #fff;
   padding:var(--padding-200);
   color:#000;
+  font-weight:600;
+  text-align: center;
   text-decoration: none;
-  text-transform: uppercase;transition:all ease-in-out var(--btm-transition-100);
+  text-transform: uppercase;
+  transition:all ease-in-out var(--btm-transition-100);
 }
 .button:hover{
   cursor: pointer;
@@ -1141,7 +1144,7 @@ dialog::backdrop {
   border-radius: 10px;
   width: 80%;
   padding: 10px;
-  top: -74px;
+  top: -88px;
   transform: scale(0);
   animation-fill-mode: forwards;
   box-shadow: #000 0px 3px 24px;

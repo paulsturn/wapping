@@ -695,7 +695,37 @@ previousButton.addEventListener("click", () => {
 });
 
 nextButton.addEventListener("click", () => {
-  stepForward();
+
+  let allowed = true;
+  let message = "";
+  let hasQuestions = false;
+
+  // w_quiz contains any .question  elements then there are questions
+  const w_quiz = document.getElementById('w_quiz');
+  const quest = document.querySelector('.question');
+
+  if (w_quiz.contains(quest)) {
+    hasQuestions = true;
+  } 
+
+  // if quizWrapper has a .quizLocked then class then attempt has been made
+  const qWrapper = document.getElementById('w_quiz');
+
+
+
+  if (allowed){  
+    stepForward();
+  }
+  else {
+
+    const myDialogEle = document.getElementById("myDialog");
+    myDialogEle.showModal();
+  
+    const dialogMessageEle = document.getElementById("dialogMessage");
+    dialogMessageEle.innerHTML = `<h4>"${message}"</h4>`;
+
+  }
+
 });
 
 mapSwitch.addEventListener("click", () => {
