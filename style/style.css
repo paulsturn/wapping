@@ -139,6 +139,11 @@ p, li{
 .content{
   margin:0;
   padding:0;
+  transition: all 1sec ease-in-out;
+}
+
+.content-hidden{
+  transform: translateX(-100vw);
 }
 
 .content p{
@@ -305,10 +310,7 @@ p, li{
   margin-top:6px;
   padding-top:6px;
   border-top:dashed 1px rgb(25, 22, 94);
-
 }
-
-
 
 .io-warning{
   background-color: var(--btm-io-warning);

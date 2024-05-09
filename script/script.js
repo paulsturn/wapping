@@ -87,16 +87,12 @@ function getDateStamp(){
       console.log("exiting DisplayCurrentItem as no steps"); 
       return;
     }
-
-console.log("Current step=" + currentIndex);
-
       const previousButton = document.getElementById('previousButton');   
       if( currentIndex == 0 ){
         previousButton.style.opacity = "0.1";
       } else {
         previousButton.style.opacity = "1";
       }
-
 
       const nextButton = document.getElementById('nextButton');   
       if( currentIndex >= 21 ){
@@ -254,6 +250,9 @@ console.log("Current step=" + currentIndex);
         else {
           w_mediaDiv1.innerHTML = '';
         }
+
+
+        // w_contentDiv.classList.remove("content-hidden");
 
     } else {
         console.log("No more items in this direction.");
