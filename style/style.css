@@ -282,7 +282,7 @@ p, li{
 }
 .io-info{
   background-color: var(--btm-io-info);
-  max-height:200px;
+  max-height:206px;
   overflow:hidden;
   transition: height 0.5s ease;
 }
@@ -291,6 +291,20 @@ p, li{
   max-height:100%;
   height:100%;
 }
+.io-info:not(.io-info-toggle){
+  border-bottom:solid 2px rgb(25, 22, 94);
+
+}
+.io-info:not(.io-info-toggle):after{
+  content:'expand';
+  display:block;
+  width:50px;
+  height:50px;
+  border:solid 1px red;
+
+}
+
+
 
 .io-warning{
   background-color: var(--btm-io-warning);
@@ -1021,14 +1035,12 @@ dialog::backdrop {
 }
 
 .button{
-  border-radius:var(--btm-radius-999);
-  border:none;          
-  background-color: #7faaf3;
-  padding:var(--padding-100);
+  border-radius:var(--btm-radius-100);
+  border:solid 1px #fff;        
+  background-color: #fff;
+  padding:var(--padding-200);
   color:#000;
   text-decoration: none;
-  font-weight:600;
-  letter-spacing: .5px;
   text-transform: uppercase;transition:all ease-in-out var(--btm-transition-100);
 }
 .button:hover{

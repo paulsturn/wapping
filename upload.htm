@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Upload</title>
+
+  <style>
+
+  </style>
+
+  <!-- import firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+
+
+</head>
+<body>
+  <div class="imageUpload">
+    <input type="file" class="inp" onchange="getImageData(event)" multiple />
+    <button onclick="selectImage()" class="selectImage">Select images</button>
+    
+    <span class="metaData"></span>
+
+    <div class="progressBar">
+      <div class="progress"></div>
+    </div>
+
+    <button class="upload" onclick="uploadImage()">Upload</button>
+    <span class="loading">Loading...</span>
+
+    <div class="images">
+
+    </div>
+  </div>
+
+
+  <script>
+
+    // Firbase setup
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCzxIGI9VCw6UPIugT52qu-VXTP0LG_C54",
+      authDomain: "beyond-4ea43.firebaseapp.com",
+      databaseURL: "https://beyond-4ea43-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "beyond-4ea43",
+      storageBucket: "beyond-4ea43.appspot.com",
+      messagingSenderId: "671124225167",
+      appId: "1:671124225167:web:644d0c53052364fa0d44fa"
+    };
+
+
+    const app = firebase.initializeApp(firebaseConfig);
+
+    const storage = firebase.storage();
+
+    const inp = document.querySelector(".inp");
+    const progressBar = document.querySelector(".progress");
+    const img = document.querySelector(".img");
+    const images = document.querySelector(".images")
+    const body = document.querySelector("body");
+    const loading =document.querySelector(".loading");
+    const metaData = document.querySelector(".metaData");
+
+    let file;
+    let files;
+    let fileName;
+    let progress;
+    let uploadedFileName;
+
+    const getImageData=(e) => {
+      files = e.target.files;
+      for (let i = 0; i <files.length; i++){
+        let imageData = document.createElement("span");
+        imageData.className = 'filedate';
+        imageData.style.display = 'block';
+        imageData.innerHTML = files[i].name;
+        metaData.appendChild(imageData);
+      }
+    };
+
+    const selectImage = () => {
+      inp.click();
+    }
+
+    const uploadImage = async () => {
+      for (let i = 0; i <files.length; i++){
+        let url = await uploadProcess(
+          files[i],
+          Math.round(Math.random()*9999)+files[i].name
+        );
+
+        if (url) {
+          loading.style.display = "none";
+          let image = document.createElement("img");
+          image.style.display = "block";
+          image.setAttribute("src",url);
+          image.className = "img";
+          images.appendChild(image);
+
+        }
+
+
+
+
+      }
+    }
+
+    const uploadProcess=(file, fileName) => {
+      return new Promise((resolve, reject) => {
+        const storageRef = storage.ref().child("myimages");
+        const folderRef = storageRef.child(fileName);
+        const uploadTask = folderRef.put(file);
+
+        uploadTask.on("state_changed", (snapshot) => {
+          loading.style.display = "block";
+          progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          progress = Math.round(progress);
+          progressBar.style.width =  progress +  "%";
+          progressBar.innerHTML = progress + "%";
+          uploadedFileName = snapshot.ref.name;
+        },(error)=>{
+          reject(error)
+        },()=>{
+          storage.ref('myimages').child(uploadedFileName).getDownloadURL().then((url)=>{
+            console.log("URL", url);
+            resolve(url)
+          });
+        }
+      );
+
+      });
+    }
+
+
+  </script>
+
+  
+</body>
+</html>

@@ -6,6 +6,10 @@
   
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+  <!-- import firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+  
   <title>BeyondTheMapLondon</title>
   
   <style>
@@ -29,11 +33,9 @@
     }
 
     .photo{
-      border:solid 1px red;
-      transition:all 2sec ease-in-out;
+      border:solid 1px #121212;
+      transition:all 1sec ease-in-out;
       width:96vw;
-      width:100%;
-      height:80vh;
     }
   
     .player{
@@ -52,149 +54,149 @@
     }
   </style>
 
-<!-- Hotjar Tracking Code for BTML DEMO -->
-<script>
-  (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:4955283,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-
   </head>
   <body>
 
     <pre class="output">.</pre>
 
     <div class="photobooth">
+
       <!-- <div class="controls">
         <button onClick="takePhoto()">Take Photo</button>
-      </div> -->
+      </div>  -->
 
       <div id="timer"></div>
       <div id="smile"></div>
 
       <canvas id="photo" class="photo"></canvas>
       <video id="video" class="player" style="display:none;"></video>
-      <div class="strip"></div>
+      <canvas id="canvas2" class=""></canvas>
+      
     </div>
   
-  <script>
+    <!-- Snapshot container  -->
+    <div id="imageContainer">
+    </div>
 
-    const video = document.querySelector('.player');
-    const canvas = document.querySelector('.photo');
-    const ctx = canvas.getContext('2d');
-    const strip = document.querySelector('.strip');
-    const output = document.querySelector(".output");
+    <button onclick="uploadImage()">Upload Image</button>
+    <script src="script/upload.js"></script>
 
-    // Fix for iOS Safari from https://leemartin.dev/hello-webrtc-on-safari-11-e8bcb5335295
-    video.setAttribute('autoplay', '');
-    video.setAttribute('muted', '');
-    video.setAttribute('playsinline', '')
 
-    const constraints = {
-      audio: false,
-      video: {
-        facingMode: 'user'
+
+
+    <script type="module">
+
+      const canvas2 = document.getElementById('canvas2');
+      const ctx2 = canvas2.getContext('2d');
+
+      const teamName = "TEAM NAME";
+
+
+      const video = document.querySelector('.player');
+      const canvas = document.querySelector('.photo');
+      const ctx = canvas.getContext('2d');
+      const output = document.querySelector(".output");
+
+
+      // Fix for iOS Safari from https://leemartin.dev/hello-webrtc-on-safari-11-e8bcb5335295
+      video.setAttribute('autoplay', '');
+      video.setAttribute('muted', '');
+      video.setAttribute('playsinline', '')
+
+      const constraints = {
+        audio: false,
+        video: {
+          facingMode: 'user'
+        }
       }
-    }
 
-    function getVideo() {
-      navigator.mediaDevices.getUserMedia(constraints)
-        .then(localMediaStream => {
-          console.log(localMediaStream);
-      
-          console.dir(video);
-          if ('srcObject' in video) {
-            video.srcObject = localMediaStream;
-          } else {
-            video.src = URL.createObjectURL(localMediaStream);
-          }
-          // video.src = window.URL.createObjectURL(localMediaStream);
-          video.play();
-        })
-        .catch(err => {
-          console.error(`Error: `, err);
-        });
-    }
-
-    function paintToCanvas() {
-      const width = video.videoWidth;
-      const height = video.videoHeight;
-      canvas.width = width;
-      canvas.height = height;
-
-      return setInterval(() => {
-        ctx.drawImage(video, 0, 0, width, height);
-      }, 16);
-    }
-
-    function takePhoto() {
-
-      // take the data out of the canvas
-      const data = canvas.toDataURL('image/jpeg');
-      const link = document.createElement('a');
-      link.href = data;
-      link.setAttribute('download', 'Photo');
-      link.innerHTML = `<img src="${data}" alt="Handsome Man" />`;
-      strip.insertBefore(link, strip.firstChild);
-    }
-
-    function countdown(seconds) {
-        const timerElement = document.getElementById('timer');
-        const smileElement = document.getElementById('smile');
+      function getVideo() {
+        navigator.mediaDevices.getUserMedia(constraints)
+          .then(localMediaStream => {
+            console.log(localMediaStream);
         
-        const timer = setInterval(() => {
-            if (seconds === 0) {
-                clearInterval(timer);
-                timerElement.textContent = '';
-                smileElement.textContent = '';
-                snap();
+            console.dir(video);
+            if ('srcObject' in video) {
+              video.srcObject = localMediaStream;
             } else {
-                timerElement.textContent = seconds;
-                seconds--;
-                if (seconds <= 3){
-                  smileElement.textContent = 'SMILE!';
-                }
+              video.src = URL.createObjectURL(localMediaStream);
             }
-        }, 1000);
-    }
-
-    function snap() {
-
-      takePhoto();
-    }
-
-
-
-    const landscapeQuery = window.matchMedia('(orientation: landscape)');
-
-    function handleOrientationChange(mediaQuery) {
-      if (mediaQuery.matches) {
-        output.textContent = `landscape`;
-        document.getElementById('photo').classList.add('landscape');
-        document.getElementById('video').classList.add('landscape');
-
-      } else {
-        output.textContent = `portrait`;
-        document.getElementById('photo').classList.remove('landscape');
-        document.getElementById('video').classList.remove('landscape');
+            video.play();
+          })
+          .catch(err => {
+            console.error(`Error: `, err);
+          });
       }
-    }
 
-    landscapeQuery.addEventListener("change", handleOrientationChange);
+      function paintToCanvas() {
+        const width = video.videoWidth;
+        const height = video.videoHeight;
+        canvas.width = width;
+        canvas.height = height;
 
+        return setInterval(() => {
+          ctx.drawImage(video, 0, 0, width, height);
+        }, 16);
+      }
 
+      function takePhoto() {
 
+        // take the data out of the canvas
+        const data = canvas.toDataURL('image/jpeg'); 
 
-    getVideo();
+        // add image
+        const imageContainer = document.getElementById("imageContainer");
+        imageContainer.innerHTML = `<img src="${data}" style="width:99%;border:solid 1px blue;" alt="${teamName}" />`;
 
-    video.addEventListener('canplay', paintToCanvas);
+        // remove cancases
+        canvas.style.display = 'none';
+        canvas2.style.display = 'none';
+      }
 
-    countdown(10);
+      function countdown(seconds) {
+          const timerElement = document.getElementById('timer');
+          const smileElement = document.getElementById('smile');
+          
+          const timer = setInterval(() => {
+              if (seconds === 0) {
+                  clearInterval(timer);
+                  timerElement.textContent = '';
+                  smileElement.textContent = '';
+                  snap();
+              } else {
+                  timerElement.textContent = seconds;
+                  seconds--;
+                  if (seconds <= 3){
+                    smileElement.textContent = 'SMILE!';
+                  }
+              }
+          }, 1000);
+      }
+
+      function snap() {
+        takePhoto();
+      }
+
+      const landscapeQuery = window.matchMedia('(orientation: landscape)');
+
+      function handleOrientationChange(mediaQuery) {
+        if (mediaQuery.matches) {
+          output.textContent = `landscape`;
+          document.getElementById('photo').classList.add('landscape');
+          document.getElementById('video').classList.add('landscape');
+
+        } else {
+          output.textContent = `portrait`;
+          document.getElementById('photo').classList.remove('landscape');
+          document.getElementById('video').classList.remove('landscape');
+        }
+      }
+
+      landscapeQuery.addEventListener("change", handleOrientationChange);
+      getVideo();
+
+      video.addEventListener('canplay', paintToCanvas);
+      countdown(5);
 
     </script>
 
