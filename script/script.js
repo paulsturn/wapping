@@ -459,6 +459,7 @@ function removeTextInBrackets(inputString) {
 
 function setTeamNameLocal(teamName){
   setLocalData("team_name",teamName);
+  setLocalData("totalScore", 0);
 };
 
 function getTeamNameLocal(){
