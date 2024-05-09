@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="style/reset.min.css">
+  <link rel="stylesheet" href="style/style.min.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- import firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+  
+  <title>BeyondTheMapLondon</title>
+  
+  </head>
+  <body class="grunge-100">
+
+    <!-- Content -->
+    <div class="wrapper bg-gradient-2">
+
+
+      <div class="onboard-logo">
+        <img id="the-icon" src="img/BTML_Yon_Logo_WHITE.svg"  class="logo fadeInZoom-animation">
+      </div>
+      
+      <div style="text-align: center;" class="fadeIn-animation">
+        <p class="splash-intro-text">TAKE A TEAM PHOTO<br />
+          <div class="move-line"></div>
+        </p>
+      </div>
+
+      <div class="inner-full">
+        <div class="timer-wrap">
+          <div id="timer"></div>
+        </div>
+
+        <div id="smile"></div>
+
+        <canvas id="photo" class="photo">
+          
+        </canvas>
+        <video id="video" class="player" style="display:none;"></video>
+        <canvas id="canvas2" style="position:absolute;"></canvas>
+     
+        <!-- Snapshot container  -->
+        <div id="imageContainer">
+        </div>
+
+        </div>
+
+        <div id="photo-options" style="text-align: center;display:none;" class="inner-spaced">
+          <br />
+          <br />
+          <a href="onboard4.htm" class="button button-200">Take Again</a>
+          <br />
+          <br />
+          <br />
+          <div id="btn-OK"  onclick="saveAndNext();" class="button button-200">
+            Photo Good, Next
+          </div>
+          <a href="onboard3.htm" class="backlink">< back</a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="burst" class=""></div>
+
+
+    <script src="script/utility.min.js?cb=1.0.2"></script>  
+    <script src="script/upload.js"></script>
+    
+    <script>
+
+      const canvas2 = document.getElementById('canvas2');
+      const ctx2 = canvas2.getContext('2d');
+
+      const teamName = localStorage.getItem("team_name");
+
+      const video = document.querySelector('.player');
+      const canvas = document.querySelector('.photo');
+      const ctx = canvas.getContext('2d');
+ 
+      
+      // Has teamname already been set?
+      // if (teamName) {
+      //   requestTeamNameEle.style.display ='none';  
+      //   existingTeamEle.innerHTML   = "You've already named your team.<br /><strong>" + teamName + "</strong>";
+      // } else {
+      //   existingTeamEle.style.display ='none';  
+      // }
+
+
+      // Fix for iOS Safari from https://leemartin.dev/hello-webrtc-on-safari-11-e8bcb5335295
+      video.setAttribute('autoplay', '');
+      video.setAttribute('muted', '');
+      video.setAttribute('playsinline', '')
+
+      const constraints = {
+        audio: false,
+        video: {
+          facingMode: 'user'
+        }
+      }
+
+      function getVideo() {
+        navigator.mediaDevices.getUserMedia(constraints)
+          .then(localMediaStream => {
+            console.log(localMediaStream);
+        
+            console.dir(video);
+            if ('srcObject' in video) {
+              video.srcObject = localMediaStream;
+            } else {
+              video.src = URL.createObjectURL(localMediaStream);
+            }
+            video.play();
+          })
+          .catch(err => {
+            console.error(`Error: `, err);
+          });
+      }
+
+      function paintToCanvas() {
+        const width = video.videoWidth;
+        const height = video.videoHeight;
+        canvas.width = width;
+        canvas.height = height;
+
+        return setInterval(() => {
+          ctx.drawImage(video, 0, 0, width, height);
+        }, 16);
+      }
+
+      function takePhoto() {
+
+        // take the data out of the canvas
+        const data = canvas.toDataURL('image/jpeg'); 
+
+        // add image
+        const imageContainer = document.getElementById("imageContainer");
+        imageContainer.innerHTML = `<img src="${data}" alt="${teamName}" />`;
+
+        // remove canvases
+        canvas.style.display = 'none';
+        canvas2.style.display = 'none';
+
+        
+        const photoOptions = document.getElementById("photo-options");
+        photoOptions.style.display = "block";
+      }
+
+      function countdown(seconds) {
+          const timerElement = document.getElementById('timer');
+          const smileElement = document.getElementById('smile');
+          
+          const timer = setInterval(() => {
+              if (seconds === 0) {
+                  clearInterval(timer);
+                  timerElement.textContent = '';
+                  smileElement.textContent = '';
+                  snap();
+              } else {
+                  timerElement.textContent = seconds;
+                  seconds--;
+                  if (seconds < 3){
+                    smileElement.textContent = 'SMILE!';
+                  }
+              }
+          }, 1000);
+      }
+
+      function snap() {
+        takePhoto();
+      }
+
+
+      function saveAndNext(){
+        uploadImage();
+
+        const burst = document.getElementById("burst");
+        burst.classList.add('animated-element');
+        redirectToPage("start.htm", 0.5, true);
+
+      }
+
+
+      
+
+      const landscapeQuery = window.matchMedia('(orientation: landscape)');
+
+      function handleOrientationChange(mediaQuery) {
+        if (mediaQuery.matches) {
+          document.getElementById('photo').classList.add('landscape');
+          document.getElementById('video').classList.add('landscape');
+
+        } else {
+          document.getElementById('photo').classList.remove('landscape');
+          document.getElementById('video').classList.remove('landscape');
+        }
+      }
+
+      landscapeQuery.addEventListener("change", handleOrientationChange);
+      getVideo();
+
+      video.addEventListener('canplay', paintToCanvas);
+      countdown(15);
+
+    </script>
+
+  </body>
+</html>
