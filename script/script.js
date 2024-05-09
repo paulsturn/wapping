@@ -252,7 +252,7 @@ function getDateStamp(){
         }
 
 
-        // w_contentDiv.classList.remove("content-hidden");
+        w_contentDiv.classList.remove("content-hidden");
 
     } else {
         console.log("No more items in this direction.");
