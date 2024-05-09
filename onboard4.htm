@@ -28,9 +28,24 @@
       </div>
       
       <div style="text-align: center;" class="fadeIn-animation">
-        <p class="splash-intro-text">TAKE A TEAM PHOTO<br />
-          <div class="move-line"></div>
-        </p>
+        <p class="splash-intro-text"><strong>Take a Team  Selfie!</strong></p>
+        <p style="color:#fff;">You may also be asked to take photos at important locations...</p>
+        <div class="move-line"></div>       
+      </div>
+
+
+      <div id="photo-options" style="text-align: center;display:none;" class="inner-spaced">
+        <br />
+        <br />
+        <a href="onboard4.htm" class="button button-200">Take Again</a>
+        <br />
+        <br />
+        <br />
+        <div id="btn-OK"  onclick="saveAndNext();" class="button button-200">
+          Photo OK, Next Step
+        </div>
+        <br />
+        <br />
       </div>
 
       <div class="inner-full">
@@ -52,16 +67,8 @@
 
         </div>
 
-        <div id="photo-options" style="text-align: center;display:none;" class="inner-spaced">
+        <div id="" style="text-align: center;display:none;" class="inner-spaced">
           <br />
-          <br />
-          <a href="onboard4.htm" class="button button-200">Take Again</a>
-          <br />
-          <br />
-          <br />
-          <div id="btn-OK"  onclick="saveAndNext();" class="button button-200">
-            Photo Good, Next
-          </div>
           <a href="onboard3.htm" class="backlink">< back</a>
         </div>
 
@@ -209,7 +216,7 @@
       getVideo();
 
       video.addEventListener('canplay', paintToCanvas);
-      countdown(15);
+      countdown(10);
 
     </script>
 
