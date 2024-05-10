@@ -1,5 +1,5 @@
 
-import { saveTeam, saveResult } from "./data.js";
+import { saveTeam, saveResult, nameExists } from "./data.js";
 
 
 let map = null;
@@ -18,6 +18,9 @@ const teamName = getTeamNameLocal();
 
 // Display first step
 displayCurrentItem();
+
+nameExists("Mr Team");
+
 
 // Quiz code 
 //------------------------------------------------------------------------------------

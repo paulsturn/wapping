@@ -35,10 +35,7 @@ html {
 
 body {
     font-family: Quicksand, sans-serif;
-    background-color:#212121;
-    background-repeat: none;
-    background-size: cover;
-    background-position: center center;
+    background-color:#ffffff;
     padding:0;
     margin:0;  
     height:100vh;
@@ -1010,10 +1007,10 @@ dialog::backdrop {
 }
 
 .grunge-100{
-    background-image: url(../img/texture-200.jpg);
+    /* background-image: url(../img/texture-200.jpg);
     background-repeat: none;
     background-size: cover;
-    background-position: center center;
+    background-position: center center; */
 }
 
 
@@ -1042,7 +1039,7 @@ dialog::backdrop {
 
 .button{
   border-radius:var(--btm-radius-100);
-  border:solid 1px #fff;        
+  border:solid 1px #999;        
   background-color: #fff;
   padding:var(--padding-200);
   color:#000;
