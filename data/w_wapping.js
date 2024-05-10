@@ -17,7 +17,7 @@ const steps = [
     },
     { 
         name: "Starting point & Tavern Stop", 
-        place: "<p>To start the tour from Tower Bridge, follow the signs for Tower Bridge. The walk to the meeting point of The Dickens Inn is 0.4 miles. <strong>The Dickens Inn, Marble Quay, St Katharine’s Way, London E1W 1UH</strong></p><p>On exiting Tower Bridge tube, walk towards Tower Bridge Approach (which leads onto Tower Bridge). Before you get to the start of the Bridge, enter St Katharine’s Way, which is a road that runs parallel to the bridge road on the left-hand side. The World Trade Centre in London is the building on your left.</p><p>On your left are some steps which lead down to St Katharine’s Dock and you will see a row of restaurants. Continue walking along past the restaurants until the end of the row.</p>",
+        place: "<p>Walk to the start point of Café Rouge, St Katherin's Dock. <strong>Café Rouge, 4 St Katherine's Way, London E1W 1BA</strong></p><p>On exiting Tower Bridge tube, walk towards Tower Bridge Approach (which leads onto Tower Bridge). Before you get to the start of the Bridge, enter St Katharine’s Way, which is a road that runs parallel to the bridge road on the left-hand side. The World Trade Centre in London is the building on your left.</p><p>On your left are some steps which lead down to St Katharine’s Dock and you will see a row of restaurants. Continue walking along past the restaurants until the end of the row.</p>",
         info: "<p>Take a few moments to read the black plaque about the trade at St Katharine’s Docks, on the wall behind you, as you will be asked a question or two about it later on.</p>",
         access: "",
         audio_direction: "assets/aud/dir/WTT1-1.mp3",
