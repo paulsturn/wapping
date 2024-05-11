@@ -718,7 +718,6 @@ previousButton.addEventListener("click", () => {
 nextButton.addEventListener("click", () => {
 
   let allowed = true;
-  let message = "";
   let hasQuestions = false;
 
   // w_quiz contains any .question  elements then there are questions
@@ -731,44 +730,23 @@ nextButton.addEventListener("click", () => {
     // if quizWrapper has a .quizLocked then class then attempt has been made
     const qWrapper = document.getElementById('quizWrapper');
 
+    // console.log("locked:"+ qWrapper.classList.contains("quizLocked"));
 
-    console.log("locked:"+ qWrapper.classList.contains("quizLocked"));
-
-    if (qWrapper.classList.contains("quizLocked")) {
-      // Quiz has been attempted
-      console.log("Has quiz locked element");
-    }
-    else {
-      // Quiz hasn't been attempted so warn
-      console.log("Quiz has not been attempted");
-
-      const warning = document.getElementById("myDialog");
-      warning.showModal();
-      const warningMessageEle = document.getElementById("dialogMessage");
-      warningMessageEle.innerHTML = "<br /><br /><h3>Quiz answers not checked</h3><p>Click 'CHECK ANSWERS' button to check your quiz answers.</p>";
-
-      // Exit now
-      return;
-  
+    if (!qWrapper.classList.contains("quizLocked")) {
+      allowed = false;
     }
   } 
-
-
-
-
-
-
 
   if (allowed){  
     stepForward();
   }
   else {
 
-    const myDialogEle = document.getElementById("myDialog");
-    myDialogEle.showModal();
-  
-    const dialogMessageEle = document.getElementById("dialogMessage");
-    dialogMessageEle.innerHTML = `<h4>"${message}"</h4>`;
+    const warning = document.getElementById("myDialog");
+    warning.showModal();
+    const warningMessageEle = document.getElementById("dialogMessage");
+    warningMessageEle.innerHTML = "<br /><br /><h3>Quiz answers not checked</h3><p>Click 'CHECK ANSWERS' button to check your quiz answers.</p>";
+
 
   }
 
