@@ -65,7 +65,7 @@ const steps = [
         video: "",
         lat: "51.5062640", 
         lon: "-0.07213126634",
-        selfie: "",
+        selfie: "Celebrate!",
         questions: {
             q1: "106-Which port official lives in the imposing house behind the wall? [The Dockmaster*,The Commodore of the Pool of London,Admiral of the Fleet, The King]",
             q2: "107-Which Queen of the Netherlands visited the docks in 1988 to commemorate 300 years of Anglo- Dutch maritime friendship?[Maxima,Juliana,Wilhelmina,Beatrix*]",
@@ -198,7 +198,7 @@ const steps = [
     },
     { 
         name: "Tavern stop No. 2", 
-        place: "<p>Return to Wapping High Street, and immediately turn right into the Town of Ramsgate tavern. The Town of Ramsgate, 62 Wapping High Street, London E1W 2PN This pub serves: Young’s London Original, Harvey’s Sussex, Wye Valley HPA real ales, and Whitstable Bay lager. Please note it is a Cashless Bar.Order a drink and then answer the following questions. There is a helpful historical information board near the front door which may help you with the questions.</p>",
+        place: "<p>Return to Wapping High Street, and immediately turn right into the Town of Ramsgate tavern. The Town of Ramsgate, 62 Wapping High Street, London E1W 2PN This pub serves: Young’s London Original, Harvey’s Sussex, Wye Valley HPA real ales, and Whitstable Bay lager.</p><p>Please note it is a Cashless Bar.Order a drink and then answer the following questions. There is a helpful historical information board near the front door which may help you with the questions.</p>",
         info: "<p>Story of the pub. This is possibly the site of a pub dating back to the 15th Century. Known from 1533 as The Hostel, The Red Cow, then the Ramsgate Old Town and finally as the Town of Ramsgate. The pub is famed for its Christmas decorations.</p>",
         access: "",
         audio_direction: "assets/aud/dir/WTT1-11.mp3",
@@ -217,7 +217,7 @@ const steps = [
     },
     { 
         name: "Green plaque", 
-        place: "<p>On exiting the pub, cross the road and enter St John’s Churchyard immediately in front of you. Take the left-hand path inside the churchyard. Follow the path around. On the ivy-covered brick wall at the far end, there is a green plaque. Read the plaque and answer the following questions:</p>",
+        place: "<p>On exiting the pub, cross the road and enter St John’s Churchyard immediately in front of you. Take the left-hand path inside the churchyard. Follow the path around.</p><p>On the ivy-covered brick wall at the far end, there is a green plaque. Read the plaque and answer the following questions:</p>",
         info: "",
         access: "<p>Not suitable for wheelchair users as it is very uneven due to tree-roots.</p>",
         audio_direction: "assets/aud/dir/WTT1-12.mp3",
@@ -236,7 +236,7 @@ const steps = [
     },
     { 
         name: "St John’s Church", 
-        place: "<p>Continue along the footpath as it turns to the right and exit the churchyard through the wrought iron arch. Immediately in front of you is the converted remains of St John’s Church. To the right of the church is another old building with some figures. Walk to it and answer the questions.</p>",
+        place: "<p>Continue along the footpath as it turns to the right and exit the churchyard through the wrought iron arch. Immediately in front of you is the converted remains of St John’s Church.</p><p>To the right of the church is another old building with some figures. Walk to it and answer the questions.</p>",
         info: "",
         access: "",
         audio_direction: "assets/aud/dir/WTT1-13.mp3",
@@ -255,7 +255,7 @@ const steps = [
     },
     { 
         name: "Turk’s Head", 
-        place: "<p>Walk left and head back up Scandrett Street to the junction. At the junction you will find the Turk’s Head at No. 1 Green Bank. It is now a French restaurant, but it has an interesting past. Read the plaques on the wall (Tench Street side), including one that is high up in the brickwork</p>",
+        place: "<p>Walk left and head back up Scandrett Street to the junction. At the junction you will find the Turk’s Head at No. 1 Green Bank. It is now a French restaurant, but it has an interesting past.</p><p>Read the plaques on the wall (Tench Street side), including one that is high up in the brickwork</p>",
         info: "",
         access: "",
         audio_direction: "assets/aud/dir/WTT1-14.mp3",
@@ -285,7 +285,7 @@ const steps = [
         video: "https://player.vimeo.com/video/938299518",
         lat: "51.50536098", 
         lon: "-0.059436072",
-        selfie: "",
+        selfie: "Celebrate!",
         questions: {
             q1: "155-Who owned the pub and named it the “Old Star”??[Joseph Turner*,Joseph Swan,Tina Turner,Sophie Turner]", 
             q2: "156-Who was the 1st landlady in the 1830s?[Sophie Booth*,Sophie Turner,Connie Booth,Sophie Kidd]",  
