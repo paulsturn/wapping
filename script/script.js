@@ -147,7 +147,7 @@ function getDateStamp(){
         }
 
         if(currentItem.selfie != '') {
-          w_selfieDiv.innerHTML = 'Show Selfie message';
+          w_selfieDiv.innerHTML = '<div class="button" onclick="cameraToggleLocal();">Take a Selfie!</div>';
         }
         else {
           w_selfieDiv.innerHTML = '';
