@@ -17,8 +17,8 @@ const teamName = getTeamNameLocal();
 // Display first step
 displayCurrentItem();
 
-var names = getNames();
-console.log("names:" + names);
+// var names = getNames();
+// console.log("names:" + names);
 
 // Quiz code 
 //------------------------------------------------------------------------------------
