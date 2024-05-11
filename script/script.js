@@ -23,7 +23,7 @@ displayCurrentItem();
 // Quiz code 
 //------------------------------------------------------------------------------------
 
-function attachAnswerListners(){
+function attachAnswerListeners(){
 
   // remove locked status
   removeClassFromElements("quiz","quizLocked");
@@ -102,7 +102,7 @@ function getDateStamp(){
         nextButton.style.opacity = "1";
       }
 
-
+      let attemptedSection = false;
 
 
     if (currentIndex >= 0 && currentIndex < steps.length) {
@@ -189,7 +189,10 @@ function getDateStamp(){
 
 
         // Quiz section
+        // Added check to disable if already attempted
+
         let subChildHtml = "";
+        let maxQuestionNum = 0;
 
         for (const key in currentItem.questions) {
             if (currentItem.questions.hasOwnProperty(key)) {
@@ -236,8 +239,23 @@ function getDateStamp(){
               subChildHtml += `<div class="options opt-${qid}">${answerOptions}</div>`;
               subChildHtml += `<div id="radioForm" class="hide">${radioOptions}</div>`;
               
+              // Keep highest q number to refer to thsi group of questions
+              maxQuestionNum = qid;
+
             } 
+
         }
+
+        // If this question block has been attempted before then set flag to lock it
+        if (maxQuestionNum != "0" ){
+          console.log("maxQuestionNum: "+maxQuestionNum );
+
+          attemptedSection = getLocalData("q"+maxQuestionNum+"4");
+
+          console.log("question id state is: "+maxQuestionNum + " -> "+ attemptedSection );
+        }
+       
+
 
         if (subChildHtml == "") {
           subChildHtml += '<h3>Take a break, there are no questions for this stage...</h3>';
@@ -266,8 +284,17 @@ function getDateStamp(){
         console.log("No more items in this direction.");
     }
 
-    // Attach answer listners
-    attachAnswerListners();
+    // Attach answer listeners
+    attachAnswerListeners();
+
+
+    // Lock question if already attempted
+    if (attemptedSection) {
+      // Stop re-submitting of answers and restyle section
+      console.log("LOCK THE QUESTION");
+      removeAnswerHandler();
+      addClassToElements("quiz","quizLocked");
+    }
 
     // Do post display options
     resetAnimations();
@@ -600,6 +627,9 @@ function checkAnswers() {
 
   let compResult = getDateStamp() + "|"  + teamName + "|" + answerTextComp;
   saveResult(compResult);
+
+
+  setLocalData(questionId, true)
 
 
   // Stop re-submitting of answers and restyle section
