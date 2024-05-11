@@ -1,9 +1,7 @@
 
-import { saveTeam, saveResult, nameExists } from "./data.js";
-
+import { saveTeam, saveResult, getNames } from "./data.js";
 
 let map = null;
-
 
 // If map div is preent on page then init the map
 if (elementExistByID("map")) {
@@ -19,8 +17,8 @@ const teamName = getTeamNameLocal();
 // Display first step
 displayCurrentItem();
 
-nameExists("Mr Team");
-
+var names = getNames();
+console.log("names:" + names);
 
 // Quiz code 
 //------------------------------------------------------------------------------------
@@ -677,14 +675,27 @@ addTeam.addEventListener("click", () => {
 
   const teamName = document.getElementById("teamName");
 
+console.log(teamName.value);
+
   if (teamName.value){
+
     createX(teamName.value); 
+
+    const myDialogEle = document.getElementById("myDialog");
     myDialog.showModal()
+    const dialogMessageEle = document.getElementById("dialogMessage");
+    dialogMessageEle.innerHTML = "<br /><br /><h3>Thank you</h3><p>Your teamname has been saved.</p>";
+    // enable next button
+    const start = document.getElementById("btn-start");
+    start.style.display = "block";
+
   }
   else{
-    alert("Please enter a team name!");
-    // myDialog.showModal()
-    // dialogMessage.textContent = "Please enter a team name!";
+    const myDialogEle = document.getElementById("myDialog");
+    myDialogEle.showModal();
+    const dialogMessageEle = document.getElementById("dialogMessage");
+    dialogMessageEle.innerHTML = "<br /><br /><h3>Please enter a team name!</h3><p>We use the team name you enter to save your quiz score.</p>";
+
   }
   
 });

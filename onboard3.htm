@@ -25,19 +25,19 @@
         
         <div style="text-align: center;" class="fadeIn-animation">
           <p class="splash-intro-text">LONDON WAPPING WALK<br />
-            <span>St Katherine, Painters & Pirates</span>
+            <!-- <span>St Katherine, Painters & Pirates</span> -->
             <div class="move-line"></div>
           </p>
 
-          <img id="the-pirate" src="img/BTML-Wapping-Tavern-Tour.svg" class="fadeIn-animation pirate " style="width:35%;">
+          <!-- <img id="the-pirate" src="img/BTML-Wapping-Tavern-Tour.svg" class="fadeIn-animation pirate " style="width:35%;"> -->
 
-
-          <!-- Don't show this is already have a team name -->
+          <!-- Don't show this if already have a team name -->
           <div class="team-wrap">
             <div id="requestTeamName">
-              <p class="onboard-text">
+              <p class="onboard-text" style="color:#fff;">
                 Give your team a name...
               </p>
+              <br />
               <input type="text" id="teamName" name="teamName" placeholder="e.g. Tequila Mockingbirds">
               <br /><br />
               <div id="addTeamName" class="button button-100">Save Team Name</div>
@@ -46,8 +46,9 @@
             <p id="existingTeam" class="onboard-text"></p>
           </div>      
 
+          <p style="color:#fff;padding:12px;font-size:16px;">Next, take a team selfie. Please confirm it's OK to use the camera when prompted.</p>
 
-          <div style="padding:0 80px;">
+          <div style="padding:0 40px;">
             <div id="btn-start" class="button button-200">
                 Next...
             </div>
@@ -55,21 +56,20 @@
           </div>         
         </div>
         
-        <div class="spacer"></div>
-   
       </div>
 
       <div id="burst" class=""></div>
 
       <dialog id="myDialog">
         <div class="dialog-inner">
-          <div class="dialog-message">
+          <div id="dialogMessage" class="dialog-message">
             <h3>Thank you</h3>
             <p>Your teamname has been saved.</p>
           </div>
           <button onClick="myDialog.close()" class="button dialog-button">OK</button>
         </div>
       </dialog>
+
 
     </div>
 
@@ -79,6 +79,9 @@
     <script>
 
       const start = document.getElementById("btn-start");
+
+      start.style.display = "none";
+
       start.addEventListener("click", () => {
 
         const burst = document.getElementById("burst");
@@ -86,6 +89,7 @@
         redirectToPage("onboard4.htm", 0.5, true);
 
       });
+
 
       // existingTeam
       const requestTeamNameEle = document.getElementById("requestTeamName"); 
@@ -99,13 +103,14 @@
       if (teamName) {
         requestTeamNameEle.style.display ='none';  
         existingTeamEle.innerHTML   = "You've already named your team.<br /><strong>" + teamName + "</strong>";
+        
+        // enable next button
+        const start = document.getElementById("btn-start");
+        start.style.display = "block";
       } else {
         existingTeamEle.style.display ='none';  
       }
       
-
-
-
     </script>
 
   </body>

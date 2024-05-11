@@ -1,6 +1,6 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
-import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
+import { getDatabase, ref, push, child, get,query,orderByChild,equalTo } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
 
 
 const appSettings = {
@@ -31,30 +31,20 @@ export function saveResult(result) {
     push(resultsInDB, result);
 }
 
-// export async function nameExists(theName) {
-//     const userData = (
-//         await ref("teams")
-//           .orderByChild("Email") 
-//           .equalTo(theName)
-//           .once('value') 
-//       ).val();
+export function getNames(){
 
-//       console.log(userData);
-// }
+    const dbRef = ref(database);
+    var test = [];
 
+    get(child(dbRef,"teams"))
+        .then((snapshot)=>{
+            
+            snapshot.forEach(childSnapshot => {
+                test.push(childSnapshot.val());
+            });
 
+    console.log(test);
+    return test;
+    })
 
-export function nameExists(theName){
-
-    // // const database = firebase.database();
-    // const ref = database.ref('teams'); // Replace with your database path
-
-    // ref.once('value')
-    // .then((snapshot) => {
-    //     const data = snapshot.val();
-    //     console.log(data);
-    // })
-    // .catch((error) => {
-    //     console.error('Error fetching data:', error);
-    // });
 }
