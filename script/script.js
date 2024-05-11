@@ -119,7 +119,7 @@ function getDateStamp(){
         const w_infoDiv = document.getElementById('w_info');
         const w_warningDiv = document.getElementById('w_warning');
         const w_mediaDiv1 = document.getElementById('w_media_1');
-
+        const w_selfieDiv = document.getElementById('w_selfie');
 
       
         const b_checkAnswers = document.getElementById('btnCheckAnswers');
@@ -147,6 +147,13 @@ function getDateStamp(){
         }
         else {
           w_warningDiv.innerHTML = '';
+        }
+
+        if(currentItem.selfie != '') {
+          w_selfieDiv.innerHTML = 'Show Selfie message';
+        }
+        else {
+          w_selfieDiv.innerHTML = '';
         }
 
         // If have audio directions then show section
