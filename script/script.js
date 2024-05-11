@@ -17,9 +17,6 @@ const teamName = getTeamNameLocal();
 // Display first step
 displayCurrentItem();
 
-// var names = getNames();
-// console.log("names:" + names);
-
 // Quiz code 
 //------------------------------------------------------------------------------------
 
@@ -85,7 +82,7 @@ function getDateStamp(){
   
     // If no steps then exit
     if (typeof steps === "undefined") { 
-      console.log("exiting DisplayCurrentItem as no steps"); 
+      // console.log("exiting DisplayCurrentItem as no steps"); 
       return;
     }
       const previousButton = document.getElementById('previousButton');   
@@ -248,11 +245,9 @@ function getDateStamp(){
 
         // If this question block has been attempted before then set flag to lock it
         if (maxQuestionNum != "0" ){
-          console.log("maxQuestionNum: "+maxQuestionNum );
-
           attemptedSection = getLocalData("q"+maxQuestionNum+"4");
 
-          console.log("question id state is: "+maxQuestionNum + " -> "+ attemptedSection );
+          // console.log("question id state is: "+maxQuestionNum + " -> "+ attemptedSection );
         }
        
 
@@ -281,7 +276,7 @@ function getDateStamp(){
         w_contentDiv.classList.remove("content-hidden");
 
     } else {
-        console.log("No more items in this direction.");
+        // console.log("No more items in this direction.");
     }
 
     // Attach answer listeners
@@ -291,7 +286,6 @@ function getDateStamp(){
     // Lock question if already attempted
     if (attemptedSection) {
       // Stop re-submitting of answers and restyle section
-      console.log("LOCK THE QUESTION");
       removeAnswerHandler();
       addClassToElements("quiz","quizLocked");
     }
@@ -392,7 +386,6 @@ function directionsPlayToggle(){
   var iconDirVol = document.getElementById("iconDirVol");
   
   // volume_up / volume_off
-  console.log(iconDirVol.innerHTML);
   let curState = iconDirVol.innerHTML;
 
   if ( curState == "volume_up"){
@@ -454,19 +447,6 @@ function togglePlayPause(audioElement) {
   }
 }
 
-// Event listener for the play/pause button (you can replace this with your own button or trigger)
-// audio.addEventListener("play", function() {
-//   console.log("Audio is playing");
-// });
-
-// audio.addEventListener("pause", function() {
-//   console.log("Audio is paused");
-// });
-
-// audio.addEventListener("ended", function() {
-//   console.log("Audio has ended");
-// });
-
 function fadePageToBlack() {
   // Get the overlay element
   var overlay = document.getElementById('overlay');
@@ -522,7 +502,6 @@ function getTeamNameLocal(){
 
 
 function setLocalData(key, data){
-  // console.log('setLocaldata:' + ' ' + key + ' ' + data);
   localStorage.setItem(key, data);
 }
 
@@ -711,8 +690,6 @@ const btnCheckAnswers = document.getElementById("btnCheckAnswers");
 addTeam.addEventListener("click", () => {
 
   const teamName = document.getElementById("teamName");
-
-console.log(teamName.value);
 
   if (teamName.value){
 
