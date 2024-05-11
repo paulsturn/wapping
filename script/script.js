@@ -288,6 +288,9 @@ function getDateStamp(){
       // Stop re-submitting of answers and restyle section
       removeAnswerHandler();
       addClassToElements("quiz","quizLocked");
+
+      // remove check answer button
+      btnCheckAnswers.style.display = 'none';
     }
 
     // Do post display options

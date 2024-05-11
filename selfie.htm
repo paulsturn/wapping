@@ -20,16 +20,16 @@
   <body>
 
     <!-- Content -->
-    <div class="wrapper bg-gradient-2">
+    <div class="wrapper xbg-gradient-2">
 
       <div id="photo-options" style="text-align: center;display:none;z-index:500;" class="inner-spaced">
         <br />
-        <a href="selfie.htm" class="button button-200">Re Take</a>
+        <a href="selfie.htm" class="button button-200">Get ready... Pose Now!</a>
         <br />
         <br />
         <br />
         <div id="btn-OK"  onclick="saveAndNext();" class="button button-200">
-          Click if Photo OK, then CLOSE 
+          Click if Photo OK 
         </div>
         <br />
         <br />
@@ -169,15 +169,20 @@
       function saveAndNext(){
         uploadImage();
 
-        // const burst = document.getElementById("burst");
-        // burst.classList.add('animated-element');
-        // redirectToPage("start.htm", 0.5, true);
-
         // Click the close button on the parent page
+        // var iframe = document.getElementById("selfieFrame");
+        // iframe.contentWindow.cameraToggleLocal();
+
+        const options= document.getElementById("photo-options");
+        options.style.display = "none";
 
       }
 
-
+      function reset(){
+        const options= document.getElementById("photo-options");
+        options.style.display = "block";  
+        window.scrollTo(0, 0);   
+      }
       
 
       const landscapeQuery = window.matchMedia('(orientation: landscape)');
