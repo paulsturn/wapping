@@ -453,6 +453,60 @@ li span.correct{
   color:var(--btm-quiz-correct);
 }
 
+p.ad{
+  color: #000;
+  font-weight: 300;
+  background-color: #c1c1ff;
+  padding: 12px;
+  border-radius: 9px;
+}
+
+#finalScore{
+  display: none;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size:1.5rem;
+  padding:1rem;
+}
+
+#w_theScore{
+  font-size:1rem;
+  font-weight:600;
+}
+
+@property --from {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
+
+.counter {
+  font-size:10rem;
+  font-weight:600;
+  line-height:10rem;
+  transition: --from 1s;
+  counter-reset: int var(--from);
+  animation: counter var(--time, 1000) forwards ease-in-out;
+}
+
+.counter::after {
+  content: counter(int);
+}
+
+@keyframes counter {
+  from { 
+    opacity: 0.5;
+    color:#0f0; 
+  }
+  to {
+    --from: var(--to, 100);
+    opacity:1;
+    color:#09597b;
+  }
+}
+
 
 
 .hide{

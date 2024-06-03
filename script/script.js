@@ -94,9 +94,33 @@ function getDateStamp(){
 
       const nextButton = document.getElementById('nextButton');   
       if( currentIndex >= 21 ){
-        nextButton.style.opacity = "0.1";
+
+        // Auto calc the number of steps
+
+        nextButton.style.opacity = "0.11";
+        previousButton.style.opacity = "0.01";
+
+        // Remove next button prompt
+        const continueMessage = document.getElementById('continuePrompt');
+        continueMessage.style.display = "none";
+
+        // Remove quiz wrapper
+        const contquizWrapperinueMessage = document.getElementById('quizWrapper');
+        quizWrapper.style.display = "none";
+
+        // Show final score
+        
+        const scoreWrap = document.getElementById('finalScore');
+        scoreWrap.style.display = "flex";
+
+        const theScore = document.getElementById('w_theScore');
+        theScore.innerHTML = "<span class='counter' style='--from:0; --to:32; --time:4s;'></span>";
+        
+
       } else {
         nextButton.style.opacity = "1";
+        const scoreWrap = document.getElementById('finalScore');
+        scoreWrap.style.display = "none";
       }
 
       let attemptedSection = false;
@@ -147,7 +171,7 @@ function getDateStamp(){
         }
 
         if(currentItem.selfie != '') {
-          w_selfieDiv.innerHTML = '<div class="button" onclick="cameraToggleLocal();">Take a Selfie!</div>';
+          w_selfieDiv.innerHTML = '<div class="button" onclick="cameraToggleLocal();">Take a Selfie...<br />get the location in the background!</div>';
         }
         else {
           w_selfieDiv.innerHTML = '';
