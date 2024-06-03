@@ -97,7 +97,7 @@ function getDateStamp(){
 
         // Auto calc the number of steps
 
-        nextButton.style.opacity = "0.11";
+        nextButton.style.opacity = "0.01";
         previousButton.style.opacity = "0.01";
 
         // Remove next button prompt
