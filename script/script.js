@@ -120,6 +120,11 @@ function getDateStamp(){
       var totalScore = getLocalData("totalScore"); 
       theScore.innerHTML = `<span class='counter' style='--from:0; --to:${totalScore}; --time:4s;'></span>`;
         
+      // Save final score to DB
+      let finalResult = getDateStamp() + "|"  + teamName + "|total|" + totalScore;
+      saveResult(finalResult);
+
+
       } else {
         nextButton.style.opacity = "1";
         const scoreWrap = document.getElementById('finalScore');
