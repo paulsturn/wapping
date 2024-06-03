@@ -114,9 +114,12 @@ function getDateStamp(){
         scoreWrap.style.display = "flex";
 
         const theScore = document.getElementById('w_theScore');
-        theScore.innerHTML = "<span class='counter' style='--from:0; --to:32; --time:4s;'></span>";
-        
 
+// get actual score
+
+      var totalScore = getLocalData("totalScore"); 
+      theScore.innerHTML = `<span class='counter' style='--from:0; --to:${totalScore}; --time:4s;'></span>`;
+        
       } else {
         nextButton.style.opacity = "1";
         const scoreWrap = document.getElementById('finalScore');
