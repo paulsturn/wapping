@@ -156,7 +156,7 @@ const steps = [
         questions: {
             q1: "120-What was the bombing of London called in WWII?[The London Bombing,The Blitz*,The London Firestorm,The Lightning War]",
             q2: "121-What does the dove symbolise according to the information plaque?[Hope*,Courage,Love,Peace]",  
-            q3: "122-On this site stood the Hermitage Wharf which was hit by a massive firebomb raid on the City of London. When was this?[25th December 1940,25th December 1940,29th December 1940*,31st December 1940]",  
+            q3: "122-On this site stood the Hermitage Wharf which was hit by a massive firebomb raid on the City of London. When was this?[25th December 1940,26th December 1940,29th December 1940*,31st December 1940]",  
             q4: "123-Which former MP lived near the gardens and has a rose bed near the statue named after them in the gardens?[Jim Fitzpatrick,Apsana Begum,George Galloway, Jo Cox*]", 
         }   
     },
